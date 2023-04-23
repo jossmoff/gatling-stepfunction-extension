@@ -1,4 +1,32 @@
 plugins {
-    id "java"
+    id "scala"
     id "jacoco"
+    id "com.diffplug.spotless" version "6.18.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    scalaVersion = "2.13.10"
+    gatlingVersion = "3.9.3"
+    awsSdkVersion = "2.20.48"
+    awaitilityVersion = "4.2.0"
+}
+
+
+dependencies {
+    implementation("org.scala-lang:scala-library:${scalaVersion}")
+    implementation("io.gatling:gatling-core:${gatlingVersion}")
+    implementation("io.gatling:gatling-commons:${gatlingVersion}")
+    implementation("software.amazon.awssdk:sfn:${awsSdkVersion}")
+    implementation("org.awaitility:awaitility:${awaitilityVersion}")
+}
+
+
+spotless {
+    scala {
+        scalafmt()
+    }
 }
