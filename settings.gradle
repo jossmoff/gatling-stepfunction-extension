@@ -1,0 +1,3 @@
+rootProject.name='gatling-stepfunction-extension'
+
+include 'example'
