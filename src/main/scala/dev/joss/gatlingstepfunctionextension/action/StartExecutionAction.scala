@@ -63,11 +63,11 @@ case class StartExecutionAction(
 
     if (startExecutionResponse.isEmpty) {
       logFailure(
-        "a",
+        name,
         session,
         start,
         end,
-        s"Could not start step function with ARN: ${stateMachineArn}"
+        s"Could not start step function with ARN: $stateMachineArn"
       )
     }
     startExecutionResponse.get.executionArn()

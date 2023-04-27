@@ -12,7 +12,7 @@ final class SfnDslBuilderBase(requestName: Expression[String]) {
     new StartExecutionDslBuilder.ExecutionArn(requestName)
 
   def checkSucceeded: CheckSucceededDslBuilder =
-    new CheckSucceededDslBuilder(requestName)
+    CheckSucceededDslBuilder(requestName)
 }
 
 object StartExecutionDslBuilder {
@@ -28,7 +28,7 @@ object StartExecutionDslBuilder {
     def payload(payload: Expression[String]): StartExecutionDslBuilder =
       StartExecutionDslBuilder(
         SfnAttributes(requestName, executionArn, payload),
-        StartExecutionActionBuilder(_)
+        StartExecutionActionBuilder
       )
   }
 }

@@ -1,17 +1,12 @@
 package dev.joss.gatlingstepfunctionextension
 
-import dev.joss.gatlingstepfunctionextension.protocol.{
-  SfnProtocol,
-  SfnProtocolBuilder
-}
-import dev.joss.gatlingstepfunctionextension.request.{
-  CheckSucceededDslBuilder,
-  SfnDslBuilderBase,
-  StartExecutionDslBuilder
-}
+import dev.joss.gatlingstepfunctionextension.protocol.{SfnProtocol, SfnProtocolBuilder}
+import dev.joss.gatlingstepfunctionextension.request.{CheckSucceededDslBuilder, SfnDslBuilderBase, StartExecutionDslBuilder}
 import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.config.GatlingConfiguration
 import io.gatling.core.session._
+
+import scala.language.implicitConversions
 
 trait SfnDsl {
   def sfn(implicit

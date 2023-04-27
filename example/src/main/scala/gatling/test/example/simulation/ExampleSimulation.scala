@@ -17,7 +17,7 @@ import java.net.URI
 import scala.concurrent.duration.DurationInt
 import scala.language.postfixOps
 class ExampleSimulation extends Simulation {
-  var sfnClient = SfnClient
+  var sfnClient: SfnClient = SfnClient
     .builder()
     .endpointOverride(URI.create("http://localhost:4566"))
     .region(Region.EU_WEST_1)
