@@ -2,6 +2,7 @@
 
 This is a custom Gatling extension that allows you to perform load testing on AWS Step Functions using the AWS SDK. With this extension, you can start a Step Function execution and wait for it to complete, allowing you to test the performance of your Step Functions under load.
 
+NOTE: The package has not yet been published, of somehow you find this before i've got this ready for 1.0.0 please feel free to help. :)
 ## Prerequisites
 
 To use this extension, you'll need the following:
