@@ -7,23 +7,10 @@ import io.gatling.core.CoreComponents
 import io.gatling.core.action.{Action, ExitableAction}
 import io.gatling.core.session._
 import io.gatling.core.stats.StatsEngine
-import org.awaitility.Awaitility.await
 import software.amazon.awssdk.services.sfn.SfnClient
-import software.amazon.awssdk.services.sfn.model.ExecutionStatus.{
-  RUNNING,
-  SUCCEEDED
-}
-import software.amazon.awssdk.services.sfn.model.{
-  DescribeExecutionRequest,
-  DescribeExecutionResponse,
-  ExecutionStatus,
-  StartExecutionRequest
-}
+import software.amazon.awssdk.services.sfn.model.StartExecutionRequest
 
-import java.time.Instant
 import java.util.concurrent.Callable
-import java.util.function.Predicate
-import scala.concurrent.duration.SECONDS
 
 case class StartExecutionAction(
     sfnClient: SfnClient,
@@ -63,11 +50,11 @@ case class StartExecutionAction(
 
     if (startExecutionResponse.isEmpty) {
       logFailure(
-        name,
+        "a",
         session,
         start,
         end,
-        s"Could not start step function with ARN: $stateMachineArn"
+        s"Could not start step function with ARN: ${stateMachineArn}"
       )
     }
     startExecutionResponse.get.executionArn()

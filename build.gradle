@@ -2,7 +2,13 @@ plugins {
     id "scala"
     id "jacoco"
     id "com.diffplug.spotless" version "6.18.0"
+    id 'maven-publish'
 }
+
+group = 'dev.joss'
+version = '1.0'
+
+
 
 repositories {
     mavenCentral()
@@ -12,7 +18,6 @@ ext {
     scalaVersion = "2.13.10"
     gatlingVersion = "3.9.3"
     awsSdkVersion = "2.20.48"
-    awaitilityVersion = "4.2.0"
 }
 
 
@@ -21,12 +26,69 @@ dependencies {
     implementation("io.gatling:gatling-core:${gatlingVersion}")
     implementation("io.gatling:gatling-commons:${gatlingVersion}")
     implementation("software.amazon.awssdk:sfn:${awsSdkVersion}")
-    implementation("org.awaitility:awaitility:${awaitilityVersion}")
 }
 
 
 spotless {
     scala {
         scalafmt()
+    }
+}
+
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'gatlingstepfunctionextension'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'Gatling Step Function Extension'
+                description = 'A Gatling extension for executing step functions.'
+                url = 'https://github.com/jossmoff/gatling-stepfunction-extension'
+                licenses {
+                    license {
+                        name = 'The MIT License (MIT)'
+                        url = 'http://opensource.org/licenses/MIT'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'jossmoff'
+                        name = 'Joss Moffatt'
+                        email = 'josshmoffatt@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git@github.com:jossmoff/gatling-stepfunction-extension.gitt'
+                    developerConnection = 'scm:git@github.com:jossmoff/gatling-stepfunction-extension.git'
+                    url = 'https://github.com/jossmoff/gatling-stepfunction-extension'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
     }
 }

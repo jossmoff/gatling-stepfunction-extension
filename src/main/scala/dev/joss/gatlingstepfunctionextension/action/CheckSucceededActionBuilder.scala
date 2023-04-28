@@ -1,10 +1,6 @@
 package dev.joss.gatlingstepfunctionextension.action
 
-import dev.joss.gatlingstepfunctionextension.protocol.SfnProtocol
-import dev.joss.gatlingstepfunctionextension.request.SfnAttributes
 import io.gatling.core.action.Action
-import io.gatling.core.action.builder.ActionBuilder
-import io.gatling.core.session.Expression
 import io.gatling.core.structure.ScenarioContext
 import io.gatling.core.util.NameGen
 

@@ -37,11 +37,11 @@ class ExampleSimulation extends Simulation {
         .executionArn(sfnArn)
         .payload("{\"IsHelloWorldExample\": true}")
     )
-    .pause(4000.milliseconds)
+    .pause(25000.milliseconds)
     .exec(sfn("Check the response").checkSucceeded)
 
   val requests = scn.inject {
-    constantUsersPerSec(10) during (20 seconds)
+    constantUsersPerSec(100) during (5 minutes)
   }
   setUp(requests).protocols(SfnProtocol(sfnClient))
 
