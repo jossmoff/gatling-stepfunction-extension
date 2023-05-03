@@ -50,7 +50,7 @@ case class StartExecutionAction(
 
     if (startExecutionResponse.isEmpty) {
       logFailure(
-        "a",
+        name,
         session,
         start,
         end,
@@ -73,15 +73,15 @@ case class StartExecutionAction(
   override def clock: Clock = coreComponents.clock
 
   private def logSuccess(
-      sfnName: String,
-      session: Session,
-      start: Long,
-      end: Long
+                          requestName: String,
+                          session: Session,
+                          start: Long,
+                          end: Long
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
       session.groups,
-      sfnName,
+      requestName,
       start,
       end,
       OK,
@@ -91,16 +91,16 @@ case class StartExecutionAction(
   }
 
   private def logFailure(
-      sfnName: String,
-      session: Session,
-      start: Long,
-      end: Long,
-      message: String
+                          requestName: String,
+                          session: Session,
+                          start: Long,
+                          end: Long,
+                          message: String
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
       session.groups,
-      sfnName,
+      requestName,
       start,
       end,
       KO,

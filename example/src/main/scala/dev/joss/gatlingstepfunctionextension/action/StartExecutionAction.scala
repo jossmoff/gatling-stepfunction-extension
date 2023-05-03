@@ -7,23 +7,13 @@ import io.gatling.core.CoreComponents
 import io.gatling.core.action.{Action, ExitableAction}
 import io.gatling.core.session._
 import io.gatling.core.stats.StatsEngine
-import org.awaitility.Awaitility.await
 import software.amazon.awssdk.services.sfn.SfnClient
-import software.amazon.awssdk.services.sfn.model.ExecutionStatus.{
-  RUNNING,
-  SUCCEEDED
-}
+
 import software.amazon.awssdk.services.sfn.model.{
-  DescribeExecutionRequest,
-  DescribeExecutionResponse,
-  ExecutionStatus,
   StartExecutionRequest
 }
 
-import java.time.Instant
 import java.util.concurrent.Callable
-import java.util.function.Predicate
-import scala.concurrent.duration.SECONDS
 
 case class StartExecutionAction(
     sfnClient: SfnClient,
@@ -63,7 +53,7 @@ case class StartExecutionAction(
 
     if (startExecutionResponse.isEmpty) {
       logFailure(
-        "a",
+        name,
         session,
         start,
         end,
@@ -86,7 +76,7 @@ case class StartExecutionAction(
   override def clock: Clock = coreComponents.clock
 
   private def logSuccess(
-      sfnName: String,
+      requestName: String,
       session: Session,
       start: Long,
       end: Long
@@ -94,7 +84,7 @@ case class StartExecutionAction(
     statsEngine.logResponse(
       session.scenario,
       session.groups,
-      sfnName,
+      requestName,
       start,
       end,
       OK,
@@ -104,7 +94,7 @@ case class StartExecutionAction(
   }
 
   private def logFailure(
-      sfnName: String,
+      requestName: String,
       session: Session,
       start: Long,
       end: Long,
@@ -113,7 +103,7 @@ case class StartExecutionAction(
     statsEngine.logResponse(
       session.scenario,
       session.groups,
-      sfnName,
+      requestName,
       start,
       end,
       KO,

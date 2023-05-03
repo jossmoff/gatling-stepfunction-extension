@@ -1,8 +1,9 @@
 plugins {
-    id "scala"
-    id "jacoco"
-    id "com.diffplug.spotless" version "6.18.0"
+    id 'scala'
+    id 'jacoco'
+    id 'com.diffplug.spotless' version '6.18.0'
     id 'maven-publish'
+    id 'signing'
 }
 
 group = 'dev.joss'
@@ -46,20 +47,14 @@ java {
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            groupId = 'dev.joss'
             artifactId = 'gatlingstepfunctionextension'
             from components.java
-            versionMapping {
-                usage('java-api') {
-                    fromResolutionOf('runtimeClasspath')
-                }
-                usage('java-runtime') {
-                    fromResolutionResult()
-                }
-            }
             pom {
                 name = 'Gatling Step Function Extension'
                 description = 'A Gatling extension for executing step functions.'
                 url = 'https://github.com/jossmoff/gatling-stepfunction-extension'
+                inceptionYear = '2023'
                 licenses {
                     license {
                         name = 'The MIT License (MIT)'
@@ -86,9 +81,13 @@ publishing {
             name = "OSSRH"
             url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
+                username = project.findProperty("sonatypeUsername")
+                password = project.findProperty("sonatypePassword")
             }
         }
     }
+}
+
+signing {
+    sign publishing.publications.mavenJava
 }

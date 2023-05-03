@@ -13,12 +13,12 @@ trait SfnDsl {
       configuration: GatlingConfiguration
   ): SfnProtocolBuilder.type = SfnProtocolBuilder
 
-  /** DSL text to start the jms builder
+  /** DSL text to start the sfn builder
     *
     * @param requestName
     *   human readable name of request
     * @return
-    *   a JmsDslBuilderBase instance which can be used to build up a JMS action
+    *   a SfnDslBuilderBase instance which can be used to build up a Sfn request
     */
   def sfn(requestName: Expression[String]): SfnDslBuilderBase =
     new SfnDslBuilderBase(requestName)
@@ -27,7 +27,7 @@ trait SfnDsl {
     * somewhat (you can pass the builder reference to the scenario
     * .protocolConfig() method)
     */
-  implicit def sfnProtocolBuilder2jmsProtocol(
+  implicit def sfnProtocolBuilder2sfnProtocol(
       builder: SfnProtocolBuilder
   ): SfnProtocol = builder.build
 

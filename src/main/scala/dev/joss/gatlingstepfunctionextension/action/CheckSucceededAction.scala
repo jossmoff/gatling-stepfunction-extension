@@ -62,15 +62,15 @@ case class CheckSucceededAction(
 
   }
   private def logSuccess(
-      sfnName: String,
-      session: Session,
-      start: Long,
-      end: Long
+                          requestName: String,
+                          session: Session,
+                          start: Long,
+                          end: Long
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
       session.groups,
-      sfnName,
+      requestName,
       start,
       end,
       OK,
@@ -81,16 +81,16 @@ case class CheckSucceededAction(
   }
 
   private def logFailure(
-      sfnName: String,
-      session: Session,
-      start: Long,
-      end: Long,
-      message: String
+                          requestName: String,
+                          session: Session,
+                          start: Long,
+                          end: Long,
+                          message: String
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
       session.groups,
-      sfnName,
+      requestName,
       start,
       end,
       KO,

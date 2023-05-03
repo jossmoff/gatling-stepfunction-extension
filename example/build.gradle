@@ -20,14 +20,13 @@ gatling {
     // WARNING: options below only work when logback config file isn't provided
     logLevel = 'INFO' // logback root level
     logHttp = 'NONE' // set to 'ALL' for all HTTP traffic in TRACE, 'FAILURES' for failed HTTP traffic in DEBUG
-    jvmArgs = ['-Xmx4g', '-XX:+HeapDumpOnOutOfMemoryError']
 }
 
 ext {
     scalaVersion = "2.13.10"
     gatlingVersion = "3.9.3"
     awsSdkVersion = "2.20.48"
-    awaitilityVersion = "4.2.0"
+    apacheClientVersion = "2.20.52"
 }
 
 
@@ -37,14 +36,12 @@ dependencies {
     implementation("io.gatling:gatling-http:${gatlingVersion}")
     implementation("io.gatling:gatling-commons:${gatlingVersion}")
     implementation("software.amazon.awssdk:sfn:${awsSdkVersion}")
-    implementation("org.awaitility:awaitility:${awaitilityVersion}")
-    implementation 'software.amazon.awssdk:apache-client:2.20.52'
+    implementation("software.amazon.awssdk:apache-client:${apacheClientVersion}")
 
     gatling("org.scala-lang:scala-library:${scalaVersion}")
     gatling("io.gatling:gatling-core:${gatlingVersion}")
     gatling("io.gatling:gatling-commons:${gatlingVersion}")
     gatling("software.amazon.awssdk:sfn:${awsSdkVersion}")
-    gatling("org.awaitility:awaitility:${awaitilityVersion}")
     gatling 'software.amazon.awssdk:apache-client:2.20.52'
 }
 
