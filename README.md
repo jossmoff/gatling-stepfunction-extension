@@ -13,53 +13,52 @@ To use this extension, you'll need the following:
 
 ## Installation
 
-To use this extension, you can add it as a dependency to your Gatling project. Add the following dependency to your Gatling project's `pom.xml` file:
+To use this extension, you can add it as a dependency to your Gatling project. Add the following dependency to your Gatling project's `build.gradle`:
 
 ```
-<dependency>
-  <groupId>dev.joss</groupId>
-  <artifactId>gatling-step-function-extension</artifactId>
-  <version>1.0.0</version>
-</dependency>
+implementation 'dev.joss:gatling-stepfunction-extension:1.0.0'
 ```
-
-Alternatively, if you're using a build tool like Gradle, you can add the following dependency to your project:
-
-```
-implementation 'dev.joss:gatling-step-function-extension:1.0.0'
-```
+For other build tools see the maven central repository [overview](https://central.sonatype.com/artifact/dev.joss/gatling-stepfunction-extension/1.0/overview#Overview).
 
 ## Usage
 
-To use this extension in your Gatling simulation, you can import the `io.gatling.aws.Predef._` package and use the `StepFunction` DSL to create a new `AwsStepFunctionAction`. Here's an example:
+To use this extension in your Gatling simulation, you can import the `dev.joss.gatling.sfn.Predef._` package and use the `Sfn` DSL to create a new simulation. Here's an example:
 
 ```scala
+import dev.joss.gatling.sfn.Predef._
+import dev.joss.gatling.sfn.protocol.SfnProtocol
 import io.gatling.core.Predef._
-import dev.joss.gstlingetepfunctionextension.Predef._
-import com.amazonaws.services.stepfunctions.AWSStepFunctionsClientBuilder
-import com.amazonaws.services.stepfunctions.AWSStepFunctions
+import io.gatling.core.scenario.Simulation
 
-class MySimulation extends Simulation {
-  val awsStepFunctions: AWSStepFunctions = AWSStepFunctionsClientBuilder.defaultClient()
+import software.amazon.awssdk.services.sfn.SfnClient
 
-  val scn = scenario("MyScenario")
+import scala.concurrent.duration.DurationInt
+import scala.language.postfixOps
+
+class ExampleSimulation extends Simulation {
+  var sfnClient: SfnClient = SfnClient.builder().build()
+  var sfnArn =
+    "arn:aws:states:eu-west-1:000000000000:stateMachine:some-arn"
+
+  val scn = scenario("SFN DSL test")
     .exec(
-      sfn("Start execution of my step function").startexecution
-        .stateMachineArn("arn:aws:states:us-east-1:123456789012:stateMachine:MyStateMachine")
-        .payload("""{"key": "value"}""")
-    ).pause(4000.milliseconds)
-     .exec(sfn("Check stepfunction has successfully complete").checkSucceedeed)
+      sfn("Start Hello World Execution").startExecution
+        .executionArn(sfnArn)
+        .payload("{}")
+    )
+    .pause(5000.milliseconds)
+    .exec(sfn("Check the response").checkSucceeded)
 
-  setUp(
-    scn.inject(atOnceUsers(10))
-  ).protocols(http.baseUrl("https://example.com"))
-   .assertions(global.successfulRequests.percent.is(100))
+  val requests = scn.inject {
+    constantUsersPerSec(100) during (5 minutes)
+  }
+  setUp(requests).protocols(SfnProtocol(sfnClient))
+
 }
+
 ```
 
-This example creates a new `AwsStepFunctionAction` that starts a Step Function execution and waits for it to complete. The `stateMachineArn` parameter specifies the ARN of the Step Function state machine to execute, and the `payload` parameter specifies the input to the execution.
-
-You can customize the behavior of the `AwsStepFunctionAction` by modifying the implementation of the `AwsStepFunctionAction` class. For example, you can modify the `execute` method to include additional logging or error handling.
+This example creates a new Gatling scenario that starts an execution, waits 5 seconds and then checks the step function has succeeded.
 
 ## License
 
