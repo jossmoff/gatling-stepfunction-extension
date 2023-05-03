@@ -8,7 +8,10 @@ import io.gatling.core.session._
 import io.gatling.core.stats.StatsEngine
 import software.amazon.awssdk.services.sfn.SfnClient
 import software.amazon.awssdk.services.sfn.model.DescribeExecutionRequest
-import software.amazon.awssdk.services.sfn.model.ExecutionStatus.{RUNNING, SUCCEEDED}
+import software.amazon.awssdk.services.sfn.model.ExecutionStatus.{
+  RUNNING,
+  SUCCEEDED
+}
 
 import java.time.Instant
 
@@ -62,10 +65,10 @@ case class CheckSucceededAction(
 
   }
   private def logSuccess(
-                          requestName: String,
-                          session: Session,
-                          start: Long,
-                          end: Long
+      requestName: String,
+      session: Session,
+      start: Long,
+      end: Long
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
@@ -81,11 +84,11 @@ case class CheckSucceededAction(
   }
 
   private def logFailure(
-                          requestName: String,
-                          session: Session,
-                          start: Long,
-                          end: Long,
-                          message: String
+      requestName: String,
+      session: Session,
+      start: Long,
+      end: Long,
+      message: String
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,

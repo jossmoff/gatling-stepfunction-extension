@@ -1,7 +1,11 @@
 package dev.joss.gatling.sfn
 
 import dev.joss.gatling.sfn.protocol.{SfnProtocol, SfnProtocolBuilder}
-import dev.joss.gatling.sfn.request.{CheckSucceededDslBuilder, SfnDslBuilderBase, StartExecutionDslBuilder}
+import dev.joss.gatling.sfn.request.{
+  CheckSucceededDslBuilder,
+  SfnDslBuilderBase,
+  StartExecutionDslBuilder
+}
 import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.config.GatlingConfiguration
 import io.gatling.core.session._

@@ -73,10 +73,10 @@ case class StartExecutionAction(
   override def clock: Clock = coreComponents.clock
 
   private def logSuccess(
-                          requestName: String,
-                          session: Session,
-                          start: Long,
-                          end: Long
+      requestName: String,
+      session: Session,
+      start: Long,
+      end: Long
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
@@ -91,11 +91,11 @@ case class StartExecutionAction(
   }
 
   private def logFailure(
-                          requestName: String,
-                          session: Session,
-                          start: Long,
-                          end: Long,
-                          message: String
+      requestName: String,
+      session: Session,
+      start: Long,
+      end: Long,
+      message: String
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,

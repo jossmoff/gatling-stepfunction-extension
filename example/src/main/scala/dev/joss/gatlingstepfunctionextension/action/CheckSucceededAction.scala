@@ -7,8 +7,16 @@ import io.gatling.core.action.{Action, ExitableAction}
 import io.gatling.core.session.{Expression, _}
 import io.gatling.core.stats.StatsEngine
 import software.amazon.awssdk.services.sfn.SfnClient
-import software.amazon.awssdk.services.sfn.model.ExecutionStatus.{RUNNING, SUCCEEDED}
-import software.amazon.awssdk.services.sfn.model.{DescribeExecutionRequest, DescribeExecutionResponse, ExecutionStatus, StartExecutionRequest}
+import software.amazon.awssdk.services.sfn.model.ExecutionStatus.{
+  RUNNING,
+  SUCCEEDED
+}
+import software.amazon.awssdk.services.sfn.model.{
+  DescribeExecutionRequest,
+  DescribeExecutionResponse,
+  ExecutionStatus,
+  StartExecutionRequest
+}
 
 import java.time.Instant
 

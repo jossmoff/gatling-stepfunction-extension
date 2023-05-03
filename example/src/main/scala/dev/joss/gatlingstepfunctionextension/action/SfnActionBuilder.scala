@@ -1,5 +1,6 @@
 package dev.joss.gatlingstepfunctionextension.action
 
+import dev.joss.gatlingstepfunctionextension.protocol.SfnProtocol
 import io.gatling.core.action.Action
 import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.protocol.ProtocolComponentsRegistry

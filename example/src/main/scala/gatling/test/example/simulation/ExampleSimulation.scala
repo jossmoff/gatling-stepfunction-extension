@@ -1,5 +1,7 @@
 package gatling.test.example.simulation
 
+import dev.joss.gatlingstepfunctionextension.Predef._
+import dev.joss.gatlingstepfunctionextension.protocol.SfnProtocol
 import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
 import software.amazon.awssdk.regions.Region

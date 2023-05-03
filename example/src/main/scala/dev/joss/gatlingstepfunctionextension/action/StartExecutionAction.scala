@@ -1,5 +1,6 @@
 package dev.joss.gatlingstepfunctionextension.action
 
+import dev.joss.gatlingstepfunctionextension.request.SfnAttributes
 import io.gatling.commons.stats.{KO, OK}
 import io.gatling.commons.util.Clock
 import io.gatling.core.CoreComponents
@@ -7,10 +8,7 @@ import io.gatling.core.action.{Action, ExitableAction}
 import io.gatling.core.session._
 import io.gatling.core.stats.StatsEngine
 import software.amazon.awssdk.services.sfn.SfnClient
-
-import software.amazon.awssdk.services.sfn.model.{
-  StartExecutionRequest
-}
+import software.amazon.awssdk.services.sfn.model.StartExecutionRequest
 
 import java.util.concurrent.Callable
 
