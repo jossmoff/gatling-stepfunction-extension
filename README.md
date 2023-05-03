@@ -59,7 +59,7 @@ class ExampleSimulation extends Simulation {
 ```
 
 This example creates a new Gatling scenario that starts an execution, waits 5 seconds and then checks the step function has succeeded.
-
+For a more applied example, see the `example` project which tests AWS's Hello World step function using localstack.
 ## License
 
 This extension is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
