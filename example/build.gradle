@@ -10,7 +10,7 @@ repositories {
 
 sourceSets {
     gatling {
-        scala.srcDir "src/main/scala"
+        scala.srcDir "src/performance/scala"
     }
 }
 
@@ -31,18 +31,13 @@ ext {
 
 
 dependencies {
-    implementation("org.scala-lang:scala-library:${scalaVersion}")
-    implementation("io.gatling:gatling-core:${gatlingVersion}")
-    implementation("io.gatling:gatling-http:${gatlingVersion}")
-    implementation("io.gatling:gatling-commons:${gatlingVersion}")
-    implementation("software.amazon.awssdk:sfn:${awsSdkVersion}")
-    implementation("software.amazon.awssdk:apache-client:${apacheClientVersion}")
-
     gatling("org.scala-lang:scala-library:${scalaVersion}")
     gatling("io.gatling:gatling-core:${gatlingVersion}")
+    gatling("io.gatling:gatling-http:${gatlingVersion}")
     gatling("io.gatling:gatling-commons:${gatlingVersion}")
     gatling("software.amazon.awssdk:sfn:${awsSdkVersion}")
-    gatling 'software.amazon.awssdk:apache-client:2.20.52'
+    gatling("software.amazon.awssdk:apache-client:${apacheClientVersion}")
+    gatling("dev.joss:gatling-stepfunction-extension:1.0")
 }
 
 spotless {

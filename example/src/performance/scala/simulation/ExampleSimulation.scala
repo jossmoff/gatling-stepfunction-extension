@@ -1,15 +1,11 @@
-package gatling.test.example.simulation
+package simulation
 
-import dev.joss.gatlingstepfunctionextension.Predef._
-import dev.joss.gatlingstepfunctionextension.protocol.SfnProtocol
+import dev.joss.gatling.sfn.Predef._
+import dev.joss.gatling.sfn.protocol.SfnProtocol
 import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
 import software.amazon.awssdk.regions.Region
-import software.amazon.awssdk.auth.credentials.{
-  AwsBasicCredentials,
-  AwsSessionCredentials,
-  StaticCredentialsProvider
-}
+import software.amazon.awssdk.auth.credentials.{AwsSessionCredentials, StaticCredentialsProvider}
 import software.amazon.awssdk.http.apache.ApacheHttpClient
 import software.amazon.awssdk.services.sfn.SfnClient
 
@@ -37,7 +33,7 @@ class ExampleSimulation extends Simulation {
         .executionArn(sfnArn)
         .payload("{\"IsHelloWorldExample\": true}")
     )
-    .pause(25000.milliseconds)
+    .pause(5000.milliseconds)
     .exec(sfn("Check the response").checkSucceeded)
 
   val requests = scn.inject {
