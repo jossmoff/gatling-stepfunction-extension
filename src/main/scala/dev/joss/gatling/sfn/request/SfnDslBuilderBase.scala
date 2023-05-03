@@ -1,6 +1,6 @@
-package dev.joss.gatlingstepfunctionextension.request
+package dev.joss.gatling.sfn.request
 
-import dev.joss.gatlingstepfunctionextension.action.{CheckSucceededActionBuilder, StartExecutionActionBuilder}
+import dev.joss.gatling.sfn.action.{CheckSucceededActionBuilder, StartExecutionActionBuilder}
 import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.session.Expression
 

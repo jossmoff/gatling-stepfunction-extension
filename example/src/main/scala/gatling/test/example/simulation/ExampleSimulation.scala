@@ -3,8 +3,6 @@ package gatling.test.example.simulation
 import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
 import software.amazon.awssdk.regions.Region
-import dev.joss.gatlingstepfunctionextension.Predef._
-import dev.joss.gatlingstepfunctionextension.protocol.SfnProtocol
 import software.amazon.awssdk.auth.credentials.{
   AwsBasicCredentials,
   AwsSessionCredentials,

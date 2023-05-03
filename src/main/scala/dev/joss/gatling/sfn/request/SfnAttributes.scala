@@ -1,4 +1,4 @@
-package dev.joss.gatlingstepfunctionextension.request
+package dev.joss.gatling.sfn.request
 
 import io.gatling.core.session.Expression
 case class SfnAttributes(

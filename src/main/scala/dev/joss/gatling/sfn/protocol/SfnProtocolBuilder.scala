@@ -1,4 +1,4 @@
-package dev.joss.gatlingstepfunctionextension.protocol
+package dev.joss.gatling.sfn.protocol
 
 import software.amazon.awssdk.services.sfn.SfnClient
 

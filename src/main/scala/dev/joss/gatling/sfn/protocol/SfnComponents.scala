@@ -1,4 +1,4 @@
-package dev.joss.gatlingstepfunctionextension.protocol
+package dev.joss.gatling.sfn.protocol
 
 import io.gatling.core.CoreComponents
 import io.gatling.core.protocol.ProtocolComponents

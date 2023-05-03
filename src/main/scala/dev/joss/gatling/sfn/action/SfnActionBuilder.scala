@@ -1,6 +1,6 @@
-package dev.joss.gatlingstepfunctionextension.action
+package dev.joss.gatling.sfn.action
 
-import dev.joss.gatlingstepfunctionextension.protocol.SfnProtocol
+import dev.joss.gatling.sfn.protocol.SfnProtocol
 import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.structure.ScenarioContext
 

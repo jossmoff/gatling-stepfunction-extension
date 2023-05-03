@@ -1,4 +1,4 @@
-package dev.joss.gatlingstepfunctionextension.action
+package dev.joss.gatling.sfn.action
 
 import io.gatling.commons.stats.{KO, OK}
 import io.gatling.commons.util.Clock
