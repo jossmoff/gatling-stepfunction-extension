@@ -42,8 +42,6 @@ java {
     withSourcesJar()
 }
 
-println(project.findProperty("sonatypeUsername"))
-
 publishing {
     publications {
         mavenJava(MavenPublication) {
