@@ -11,7 +11,8 @@ import scala.language.postfixOps
 
 class SfnCompileTest extends Simulation {
   var sfnClient: SfnClient = SfnClient
-    .builder().build()
+    .builder()
+    .build()
   var sfnArn =
     "some-test-arn"
 
