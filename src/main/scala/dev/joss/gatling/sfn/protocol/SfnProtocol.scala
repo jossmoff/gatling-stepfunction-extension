@@ -14,7 +14,7 @@ object SfnProtocol {
         throw new IllegalStateException("Can't provide a default value for SfnProtocol")
 
       def newComponents(coreComponents: CoreComponents): SfnProtocol => SfnComponents = {
-        sfnProtocol => new SfnComponents(coreComponents, sfnProtocol)
+        sfnProtocol => SfnComponents(coreComponents, sfnProtocol)
       }
     }
 }
