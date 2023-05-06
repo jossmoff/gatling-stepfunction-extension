@@ -1,7 +1,8 @@
 name: Gatling Step Function Extension enhancement
 description: Add an enhanment for Gatling Step Function Extension
-title: "[Enhancement] "
+title: "[Enhancement]"
 labels: ["kind/enhancement"]
+body:
   - type: checkboxes
     attributes:
       label: Search before asking
