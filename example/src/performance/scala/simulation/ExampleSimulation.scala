@@ -5,7 +5,10 @@ import dev.joss.gatling.sfn.protocol.SfnProtocol
 import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
 import software.amazon.awssdk.regions.Region
-import software.amazon.awssdk.auth.credentials.{AwsSessionCredentials, StaticCredentialsProvider}
+import software.amazon.awssdk.auth.credentials.{
+  AwsSessionCredentials,
+  StaticCredentialsProvider
+}
 import software.amazon.awssdk.http.apache.ApacheHttpClient
 import software.amazon.awssdk.services.sfn.SfnClient
 
