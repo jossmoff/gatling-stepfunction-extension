@@ -1,4 +1,4 @@
-
+name: 🐛 Bug report
 title: "[Bug] "
 description: Problems and issues with code of Gatling Step Function Extension
 labels: ["kind/bug"]
