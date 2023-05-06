@@ -16,6 +16,8 @@ import java.net.URI
 import scala.concurrent.duration.DurationInt
 import scala.language.postfixOps
 class ExampleSimulation extends Simulation {
+  var sfnProtocol = sfn.client(sfnClient)
+
   var sfnClient: SfnClient = SfnClient
     .builder()
     .endpointOverride(URI.create("http://localhost:4566"))
@@ -42,6 +44,6 @@ class ExampleSimulation extends Simulation {
   val requests = scn.inject {
     constantUsersPerSec(100) during (5 minutes)
   }
-  setUp(requests).protocols(SfnProtocol(sfnClient))
+  setUp(requests).protocols(sfnProtocol)
 
 }
