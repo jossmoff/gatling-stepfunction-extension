@@ -37,7 +37,7 @@ dependencies {
     gatling("io.gatling:gatling-commons:${gatlingVersion}")
     gatling("software.amazon.awssdk:sfn:${awsSdkVersion}")
     gatling("software.amazon.awssdk:apache-client:${apacheClientVersion}")
-    gatling("dev.joss:gatling-stepfunction-extension:1.0")
+    gatling("dev.joss:gatling-stepfunction-extension:1.1.0")
 }
 
 spotless {
