@@ -42,7 +42,7 @@ class ExampleSimulation extends Simulation {
   val scn = scenario("SFN DSL test")
     .exec(
       sfn("Start Hello World Execution").startExecution
-        .executionArn(sfnArn)
+        .arn(sfnArn)
         .payload("{}")
     )
     .pause(5000.milliseconds)
