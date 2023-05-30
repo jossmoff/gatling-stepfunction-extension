@@ -31,7 +31,7 @@ trait SfnDsl {
   def sfn(requestName: Expression[String]): SfnDslBuilderBase =
     new SfnDslBuilderBase(requestName)
 
-  /** Convert a JmsProtocolBuilder to a JmsProtocol <p> Simplifies the API
+  /** Convert a SfnProtocolBuilder to a SfnProtocol <p> Simplifies the API
     * somewhat (you can pass the builder reference to the scenario
     * .protocolConfig() method)
     */
