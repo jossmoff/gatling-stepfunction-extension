@@ -8,17 +8,17 @@ import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.session.Expression
 
 final class SfnDslBuilderBase(requestName: Expression[String]) {
-  def startExecution: StartExecutionDslBuilder.ExecutionArn =
-    new StartExecutionDslBuilder.ExecutionArn(requestName)
+  def startExecution: StartExecutionDslBuilder.Arn =
+    new StartExecutionDslBuilder.Arn(requestName)
 
   def checkSucceeded: CheckSucceededDslBuilder =
     CheckSucceededDslBuilder(requestName)
 }
 
 object StartExecutionDslBuilder {
-  final class ExecutionArn(requestName: Expression[String]) {
-    def executionArn(executionArn: Expression[String]): Payload =
-      new Payload(requestName, executionArn)
+  final class Arn(requestName: Expression[String]) {
+    def arn(arn: Expression[String]): Payload =
+      new Payload(requestName, arn)
   }
 
   final class Payload(
