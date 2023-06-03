@@ -12,6 +12,7 @@ import software.amazon.awssdk.auth.credentials.{
 }
 import software.amazon.awssdk.http.apache.ApacheHttpClient
 import software.amazon.awssdk.services.sfn.SfnClient
+import software.amazon.awssdk.services.sfn.model.HistoryEventType.WAIT_STATE_EXITED
 
 import java.net.URI
 import scala.concurrent.duration.DurationInt
@@ -36,12 +37,16 @@ class ExampleSimulation extends Simulation {
 
   val scn: ScenarioBuilder = scenario("SFN DSL test")
     .exec(
-      sfn("Start Hello World Exection").startExecution
+      sfn("Start Hello World Execution").startExecution
         .arn(sfnArn)
         .payload("{\"IsHelloWorldExample\": true}")
     )
-    .pause(5000.milliseconds)
-    .exec(sfn("Check the response").checkSucceeded)
+    .pause(7000.milliseconds)
+    .exec(
+      sfn("Check the response").checkStateSucceeded
+        .stateName("Wait2")
+        .stateType(WAIT_STATE_EXITED)
+    )
 
   val requests: PopulationBuilder = scn.inject {
     constantUsersPerSec(1) during (5 seconds)

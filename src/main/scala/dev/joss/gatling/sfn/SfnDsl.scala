@@ -6,6 +6,7 @@ import dev.joss.gatling.sfn.protocol.{
   SfnProtocolBuilderBase
 }
 import dev.joss.gatling.sfn.request.{
+  CheckStateSucceededDslBuilder,
   CheckSucceededDslBuilder,
   SfnDslBuilderBase,
   StartExecutionDslBuilder
@@ -45,6 +46,10 @@ trait SfnDsl {
 
   implicit def sfnDslBuilder2ActionBuilder(
       builder: CheckSucceededDslBuilder
+  ): ActionBuilder = builder.build
+
+  implicit def sfnDslBuilder2ActionBuilder(
+      builder: CheckStateSucceededDslBuilder
   ): ActionBuilder = builder.build
 
 }
