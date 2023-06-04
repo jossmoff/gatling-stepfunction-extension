@@ -1,6 +1,6 @@
 package dev.joss.gatling.sfn.action
 
-import dev.joss.gatling.sfn.request.SfnAttributes
+import dev.joss.gatling.sfn.request.attributes.SfnExecuteAttributes
 import io.gatling.commons.stats.{KO, OK}
 import io.gatling.commons.util.Clock
 import io.gatling.core.CoreComponents
@@ -11,102 +11,59 @@ import software.amazon.awssdk.services.sfn.SfnClient
 import software.amazon.awssdk.services.sfn.model.StartExecutionRequest
 
 import java.util.concurrent.Callable
+import scala.util.Try
 
 case class StartExecutionAction(
     sfnClient: SfnClient,
     coreComponents: CoreComponents,
     next: Action,
     id: String,
-    attr: SfnAttributes
-) extends ExitableAction {
-
+    attributes: SfnExecuteAttributes
+) extends SfnActionBase {
+  override def statsEngine: StatsEngine = coreComponents.statsEngine
+  override def clock: Clock = coreComponents.clock
   override def name: String = "Step Function Execution"
 
   override def execute(session: Session): Unit = {
 
-    val executionArn = startExecution(session)
-    next ! session.set("executionArn", executionArn)
-
+    val executionArn: Option[String] = startExecution(session)
+    if (executionArn.isDefined) {
+      next ! session.set("executionArn", executionArn)
+    }
   }
 
   private def startExecution(
       session: Session
-  ): String = {
+  ): Option[String] = {
     val request = StartExecutionRequest.builder()
 
     var stateMachineArn = ""
-    attr.stateMachineArn(session).map { arn =>
+    attributes.stateMachineArn(session).map { arn =>
       request.stateMachineArn(arn)
       stateMachineArn = arn
     }
 
-    attr.input(session).map { arn =>
+    attributes.input(session).map { arn =>
       request.input(arn)
     }
+
     val start = clock.nowMillis
-    val startExecutionResponse =
-      makeRequest(() => sfnClient.startExecution(request.build()))
+    val tryStartExecutionResponse =
+      trySfnRequest(() => sfnClient.startExecution(request.build()))
     val end = clock.nowMillis
 
-    if (startExecutionResponse.isEmpty) {
+    if (tryStartExecutionResponse.isFailure) {
+      val failedMessage: String =
+        tryStartExecutionResponse.failed.get.getMessage
       logFailure(
         name,
         session,
         start,
         end,
-        s"Could not start step function with ARN: ${stateMachineArn}"
+        s"Could not start step function with ARN: $stateMachineArn. Reason: $failedMessage"
       )
+      return None
     }
-    startExecutionResponse.get.executionArn()
-  }
-
-  private def makeRequest[T](request: Callable[T]): Option[T] = {
-    try {
-      Some(request.call())
-    } catch {
-      case t: Throwable => None
-    }
-  }
-
-  override def statsEngine: StatsEngine = coreComponents.statsEngine
-
-  override def clock: Clock = coreComponents.clock
-
-  private def logSuccess(
-      requestName: String,
-      session: Session,
-      start: Long,
-      end: Long
-  ): Unit = {
-    statsEngine.logResponse(
-      session.scenario,
-      session.groups,
-      requestName,
-      start,
-      end,
-      OK,
-      None,
-      None
-    )
-  }
-
-  private def logFailure(
-      requestName: String,
-      session: Session,
-      start: Long,
-      end: Long,
-      message: String
-  ): Unit = {
-    statsEngine.logResponse(
-      session.scenario,
-      session.groups,
-      requestName,
-      start,
-      end,
-      KO,
-      None,
-      Some(message)
-    )
-    next ! session.markAsFailed
+    Some(tryStartExecutionResponse.get.executionArn())
   }
 }
