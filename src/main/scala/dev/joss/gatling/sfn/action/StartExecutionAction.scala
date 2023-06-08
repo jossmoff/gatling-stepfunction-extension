@@ -28,7 +28,7 @@ case class StartExecutionAction(
 
     val executionArn: Option[String] = startExecution(session)
     if (executionArn.isDefined) {
-      next ! session.set("executionArn", executionArn)
+      next ! session.set("executionArn", executionArn.get)
     }
   }
 
