@@ -13,6 +13,8 @@ import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.session.Expression
 import software.amazon.awssdk.services.sfn.model.HistoryEventType
 
+import scala.concurrent.duration.FiniteDuration
+
 final class SfnDslBuilderBase(requestName: Expression[String]) {
   def startExecution: StartExecutionDslBuilder.Arn =
     new StartExecutionDslBuilder.Arn(requestName)
@@ -34,9 +36,25 @@ object StartExecutionDslBuilder {
       requestName: Expression[String],
       executionArn: Expression[String]
   ) {
-    def payload(payload: Expression[String]): StartExecutionDslBuilder =
+    def payload(payload: Expression[String]): MaxExecutionTime =
+      new MaxExecutionTime(requestName, executionArn, payload)
+  }
+
+  final class MaxExecutionTime(
+      requestName: Expression[String],
+      executionArn: Expression[String],
+      payload: Expression[String]
+  ) {
+    def maxExecutionTime(
+        maxExecutionTime: Expression[FiniteDuration]
+    ): StartExecutionDslBuilder =
       StartExecutionDslBuilder(
-        SfnExecuteAttributes(requestName, executionArn, payload),
+        SfnExecuteAttributes(
+          requestName,
+          executionArn,
+          payload,
+          maxExecutionTime
+        ),
         StartExecutionActionBuilder
       )
   }
