@@ -25,8 +25,8 @@ class SfnCompileTest extends Simulation {
       sfn("Start an Execution").startExecution
         .arn(sfnArn)
         .payload("{}")
+        .maxExecutionTime(1 minute)
     )
-    .pause(5000.milliseconds)
     .exec(sfn("Check the response is success").checkSucceeded)
 
   val requests: PopulationBuilder = scn.inject {
@@ -39,8 +39,8 @@ class SfnCompileTest extends Simulation {
       sfn("Start an Execution").startExecution
         .arn(sfnArn)
         .payload("{}")
+        .maxExecutionTime(5000.milliseconds)
     )
-    .pause(5000.milliseconds)
     .exec(
       sfn(
         "Check the response from a specific state is success"
