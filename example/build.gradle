@@ -1,6 +1,6 @@
 plugins {
     id "scala"
-    id 'io.gatling.gradle' version '3.9.3.1'
+    id 'io.gatling.gradle' version '3.9.5.1'
     id "com.diffplug.spotless" version "6.18.0"
 }
 
