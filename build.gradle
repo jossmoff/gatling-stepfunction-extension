@@ -1,7 +1,7 @@
 plugins {
     id 'scala'
     id 'jacoco'
-    id 'com.diffplug.spotless' version '6.18.0'
+    id 'com.diffplug.spotless' version '6.20.0'
     id 'maven-publish'
     id 'signing'
 }
