@@ -20,7 +20,7 @@ repositories {
 ext {
     scalaVersion = "2.13.11"
     gatlingVersion = "3.9.5"
-    awsSdkVersion = "2.20.115"
+    awsSdkVersion = "2.20.118"
 }
 
 
