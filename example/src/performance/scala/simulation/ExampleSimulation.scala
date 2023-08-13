@@ -41,7 +41,7 @@ class ExampleSimulation extends Simulation {
         .arn(sfnArn)
         .payload("{\"IsHelloWorldExample\": true}")
     )
-    .pause(7000.milliseconds)
+    .pause(5 seconds)
     .exec(
       sfn("Check the response").checkStateSucceeded
         .stateName("Wait2")

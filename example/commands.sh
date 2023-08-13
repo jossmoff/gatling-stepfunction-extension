@@ -18,4 +18,4 @@ awslocal stepfunctions start-execution \
 --state-machine-arn "arn:aws:states:eu-west-1:000000000000:stateMachine:hello-world-sfn" \
 --input "{\"IsHelloWorldExample\": true}"
 
-awslocal stepfunctions get-execution-history --execution-arn "arn:aws:states:eu-west-1:000000000000:execution:hello-world-sfn:6cedcd2b-d6cc-4c8c-9df9-102e6bfb87aa"
+# awslocal stepfunctions get-execution-history --execution-arn "arn:aws:states:eu-west-1:000000000000:execution:hello-world-sfn:6cedcd2b-d6cc-4c8c-9df9-102e6bfb87aa"
