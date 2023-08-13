@@ -49,6 +49,10 @@ class FakeEventLoop extends EventLoop {
     throw new UnsupportedOperationException
   override def register(promise: ChannelPromise): ChannelFuture =
     throw new UnsupportedOperationException
+  override def register(
+      channel: Channel,
+      promise: ChannelPromise
+  ): ChannelFuture = throw new UnsupportedOperationException
   override def inEventLoop(thread: Thread): Boolean =
     throw new UnsupportedOperationException
   override def newPromise[V](): Promise[V] =
@@ -66,6 +70,9 @@ class FakeEventLoop extends EventLoop {
       unit: juc.TimeUnit
   ): NFuture[_] = throw new UnsupportedOperationException
   override def terminationFuture(): NFuture[_] =
+    throw new UnsupportedOperationException
+  override def shutdown(): Unit = throw new UnsupportedOperationException
+  override def shutdownNow(): ju.List[Runnable] =
     throw new UnsupportedOperationException
   override def iterator(): ju.Iterator[EventExecutor] =
     throw new UnsupportedOperationException
