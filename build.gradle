@@ -1,7 +1,7 @@
 plugins {
     id 'scala'
     id 'jacoco'
-    id 'com.diffplug.spotless' version '6.18.0'
+    id 'com.diffplug.spotless' version '6.20.0'
     id 'maven-publish'
     id 'signing'
     id "com.avast.gradle.docker-compose" version "0.17.4"
@@ -19,10 +19,10 @@ repositories {
 }
 
 ext {
-    scalaVersion = "2.13.10"
-    gatlingVersion = "3.9.3"
-    awsSdkVersion = "2.20.48"
     junitVersion = "5.9.1"
+    scalaVersion = "2.13.11"
+    gatlingVersion = "3.9.5"
+    awsSdkVersion = "2.20.121"
 }
 
 

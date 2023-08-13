@@ -1,7 +1,7 @@
 plugins {
     id "scala"
-    id 'io.gatling.gradle' version '3.9.3.1'
-    id "com.diffplug.spotless" version "6.18.0"
+    id 'io.gatling.gradle' version '3.9.5.1'
+    id "com.diffplug.spotless" version "6.20.0"
 }
 
 repositories {
@@ -23,10 +23,10 @@ gatling {
 }
 
 ext {
-    scalaVersion = "2.13.10"
-    gatlingVersion = "3.9.3"
-    awsSdkVersion = "2.20.48"
-    apacheClientVersion = "2.20.52"
+    scalaVersion = "2.13.11"
+    gatlingVersion = "3.9.5"
+    awsSdkVersion = "2.20.121"
+    apacheClientVersion = "2.20.116"
 }
 
 
