@@ -80,7 +80,8 @@ case class CheckStateSucceededAction(
           name,
           session,
           startTime,
-          endTime
+          endTime,
+          s"The task $stateName has successfully completed"
         )
       }
     }

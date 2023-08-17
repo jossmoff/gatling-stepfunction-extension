@@ -4,13 +4,12 @@ import io.gatling.core.action.Action
 import io.gatling.core.structure.ScenarioContext
 import io.gatling.core.util.NameGen
 
-case class CheckSucceededActionBuilder()
+case class CheckSucceededActionBuilder(output: Option[String])
     extends SfnActionBuilderBase
     with NameGen {
   override def build(ctx: ScenarioContext, next: Action): Action = {
     val protocol = getProtocol(ctx)
     val client = protocol.sfnClient
-    CheckSucceededAction(client, ctx.coreComponents, next, genName(""))
+    CheckSucceededAction(client, ctx.coreComponents, next, genName(""), output)
   }
-
 }

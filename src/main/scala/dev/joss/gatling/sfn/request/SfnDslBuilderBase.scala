@@ -18,7 +18,10 @@ final class SfnDslBuilderBase(requestName: Expression[String]) {
     new StartExecutionDslBuilder.Arn(requestName)
 
   def checkSucceeded: CheckSucceededDslBuilder =
-    CheckSucceededDslBuilder(requestName)
+    CheckSucceededDslBuilder(requestName, None)
+
+  def checkSucceeded(output: String): CheckSucceededDslBuilder =
+    CheckSucceededDslBuilder(requestName, Some(output))
 
   def checkStateSucceeded: CheckStateSucceededDslBuilder.StateName =
     new CheckStateSucceededDslBuilder.StateName(requestName)
@@ -49,8 +52,11 @@ final case class StartExecutionDslBuilder(
   def build: ActionBuilder = factory(attributes)
 }
 
-final case class CheckSucceededDslBuilder(requestName: Expression[String]) {
-  def build: ActionBuilder = CheckSucceededActionBuilder()
+final case class CheckSucceededDslBuilder(
+    requestName: Expression[String],
+    output: Option[String]
+) {
+  def build: ActionBuilder = CheckSucceededActionBuilder(output)
 }
 
 object CheckStateSucceededDslBuilder {

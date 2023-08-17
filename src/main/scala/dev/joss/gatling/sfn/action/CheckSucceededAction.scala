@@ -23,7 +23,8 @@ case class CheckSucceededAction(
     sfnClient: SfnClient,
     coreComponents: CoreComponents,
     next: Action,
-    id: String
+    id: String,
+    output: Option[String]
 ) extends SfnActionBase {
 
   override def name: String = "Describe Step Function Execution"
@@ -62,12 +63,31 @@ case class CheckSucceededAction(
       executionResponse: DescribeExecutionResponse
   ): Unit = {
     if (executionResponse.status().equals(SUCCEEDED)) {
-      logSuccess(
-        name,
-        session,
-        executionResponse.startDate().toEpochMilli,
-        executionResponse.stopDate().toEpochMilli
-      )
+      if (output.isEmpty) {
+        logSuccess(
+          name,
+          session,
+          executionResponse.startDate().toEpochMilli,
+          executionResponse.stopDate().toEpochMilli,
+          "The step function successfully completed!"
+        )
+      } else if (output.exists(executionResponse.output().contains)) {
+        logSuccess(
+          name,
+          session,
+          executionResponse.startDate().toEpochMilli,
+          executionResponse.stopDate().toEpochMilli,
+          "The step function successfully completed! The output message is: " + output
+        )
+      } else {
+        logFailure(
+          name,
+          session,
+          executionResponse.startDate().toEpochMilli,
+          Instant.now().toEpochMilli,
+          "The step function failed"
+        )
+      }
     } else if (executionResponse.status().equals(RUNNING)) {
       logFailure(
         name,
