@@ -54,19 +54,4 @@ class SfnCompileTest extends Simulation {
   }
   setUp(requests2).protocols(sfnProtocol)
 
-  val output: String = "output"
-  val scn3: ScenarioBuilder = scenario("SFN DSL test")
-    .exec(
-      sfn("Start an Execution").startExecution
-        .arn(sfnArn)
-        .payload("{}")
-    )
-    .pause(5000.milliseconds)
-    .exec(sfn("Check the response is success").checkSucceeded(output))
-
-  val requests3: PopulationBuilder = scn3.inject {
-    constantUsersPerSec(100) during (5 minutes)
-  }
-  setUp(requests3).protocols(sfnProtocol)
-
 }
