@@ -65,6 +65,7 @@
     },
     "Hello World": {
       "Type": "Pass",
+      "Result": "Hello World!",
       "End": true
     }
   }

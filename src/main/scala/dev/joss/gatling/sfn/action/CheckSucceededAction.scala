@@ -24,7 +24,7 @@ case class CheckSucceededAction(
     coreComponents: CoreComponents,
     next: Action,
     id: String,
-    output: Option[String]
+    output: Option[String] = None
 ) extends SfnActionBase {
 
   override def name: String = "Describe Step Function Execution"
@@ -71,7 +71,7 @@ case class CheckSucceededAction(
           executionResponse.stopDate().toEpochMilli,
           "The step function successfully completed!"
         )
-      } else if (output.exists(executionResponse.output().contains)) {
+      } else if (output.getOrElse(None).equals(executionResponse.output())) {
         logSuccess(
           name,
           session,
