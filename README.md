@@ -15,7 +15,7 @@ To use this extension, you'll need the following:
 To use this extension, you can add it as a dependency to your Gatling project. Add the following dependency to your Gatling project's `build.gradle`:
 
 ```
-implementation 'dev.joss:gatling-stepfunction-extension:1.3.1'
+implementation 'dev.joss:gatling-stepfunction-extension:1.4.0'
 ```
 For other build tools see the maven central repository [overview](https://central.sonatype.com/artifact/dev.joss/gatling-stepfunction-extension/1.3.1/overview#Overview).
 
