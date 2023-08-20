@@ -15,7 +15,8 @@ trait SfnActionBase extends ExitableAction {
       requestName: String,
       session: Session,
       start: Long,
-      end: Long
+      end: Long,
+      message: String
   ): Unit = {
     statsEngine.logResponse(
       session.scenario,
@@ -25,7 +26,7 @@ trait SfnActionBase extends ExitableAction {
       end,
       OK,
       None,
-      None
+      Some(message)
     )
     next ! session.markAsSucceeded
   }

@@ -130,4 +130,22 @@ class SfnStandardIntegrationSpec extends SfnSpec with CoreDsl with SfnDsl {
     session.isFailed shouldBe true
     print(session.groups)
   }
+
+  "gatling-sfn" should "start and check success and output message of a standard statemachine" in {
+
+    val scn: ScenarioBuilder = scenario("SFN DSL test")
+      .exec(
+        sfn("Start Hello World Execution").startExecution
+          .arn(sfnArn)
+          .payload("{\"IsHelloWorldExample\": true}")
+      )
+      .pause(10 seconds)
+      .exec(
+        sfn("Check the response").checkSucceededWithOutput("\"Hello World!\"")
+      )
+
+    val session = runScenario(scn, sfnProtocol)
+
+    session.isFailed shouldBe false
+  }
 }
