@@ -18,6 +18,11 @@ jobs:
         distribution: temurin
         java-version: 11
 
+    - name: Set up Test Environment
+      run: |
+        pip install localstack awscli-local
+        docker pull localstack/localstack
+
     - name: Test
       run: ./gradlew test
       env:
