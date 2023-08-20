@@ -20,7 +20,7 @@ final class SfnDslBuilderBase(requestName: Expression[String]) {
   def checkSucceeded: CheckSucceededDslBuilder =
     CheckSucceededDslBuilder(requestName, None)
 
-  def checkSucceeded(output: String): CheckSucceededDslBuilder =
+  def checkSucceededWithOutput(output: String): CheckSucceededDslBuilder =
     CheckSucceededDslBuilder(requestName, Some(output))
 
   def checkStateSucceeded: CheckStateSucceededDslBuilder.StateName =

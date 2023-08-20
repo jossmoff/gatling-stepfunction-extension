@@ -141,7 +141,7 @@ class SfnStandardIntegrationSpec extends SfnSpec with CoreDsl with SfnDsl {
       )
       .pause(10 seconds)
       .exec(
-        sfn("Check the response").checkSucceeded("\"Hello World!\"")
+        sfn("Check the response").checkSucceededWithOutput("\"Hello World!\"")
       )
 
     val session = runScenario(scn, sfnProtocol)
