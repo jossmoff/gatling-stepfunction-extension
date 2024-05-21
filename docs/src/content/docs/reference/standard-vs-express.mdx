@@ -1,0 +1,18 @@
+---
+title: Standard vs. Express Workflows
+description: A reference page comparing how to use this library for express and standards stepfunctions
+---
+## Standard? Express? 
+Whats the difference? Well, to quote [aws](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html):
+> Standard Workflows are ideal for long-running (up to one year), durable, and auditable workflows. You can retrieve the full execution history using the Step Functions API for up to 90 days after your execution completes. Standard Workflows follow an exactly-once model, where your tasks and states are never run more than once, unless you have specified Retry behavior in ASL. This makes Standard Workflows suited to orchestrating non-idempotent actions, such as starting an Amazon EMR cluster or processing payments. Standard Workflow executions are billed according to the number of state transitions processed.
+
+> Express Workflows are ideal for high-volume, event-processing workloads such as IoT data ingestion, streaming data processing and transformation, and mobile application backends. They can run for up to five minutes. Express Workflows employ an at-least-once model, where an execution could potentially run more than once. This makes Express Workflows ideal for orchestrating idempotent actions such as transforming input data and storing by way of a PUT action in Amazon DynamoDB. Express Workflow executions are billed by the number of executions, the duration of execution, and the memory consumed while the execution ran.
+
+
+The key difference for `gatling-stepfunction-extension` is that the [`GetExecutionHistory`](https://docs.aws.amazon.com/step-functions/latest/apireference/API_GetExecutionHistory.html) and [`DescribeExecution`](https://docs.aws.amazon.com/step-functions/latest/apireference/API_DescribeExecution.html) API requests are not supported by Express StepFunctions.
+
+This means that in order to use express StepFunctions you must enable logging on your state machine.
+
+:::tip[Got an Express StepFunction?]
+  Details on how you can enable logging so you can use `gatling-stepfunction-extension` can be found [here](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html)!
+:::

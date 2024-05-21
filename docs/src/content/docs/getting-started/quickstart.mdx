@@ -1,0 +1,108 @@
+---
+title: Quickstart
+description: A guide to getting started with gsfe
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Introduction
+
+:::tip[Need more help?]
+  Feel free to join our [Community Discussions in GitHub](https://github.com/jossmoff/gatling-stepfunction-extension/discussions) and ask for help **once you’ve read** this documentation.
+:::
+
+## Picking the Right Language
+
+Currently only Scala is supported, however when wider language support is added, we will echo Gatling's [language recomendations](https://gatling.io/docs/gatling/tutorials/quickstart/#picking-the-right-language):
+
+> When picking a language for using Gatling, we recommend the following rule:
+>
+>    - if your target Gatling users are Scala developers, use Scala
+>    - if they are Kotlin developers, use Kotlin
+>    - otherwise, use Java
+
+## Installation
+If you need detailed instructions on how to add this project to your own application using your favorite build tool, please refer to the [Installation](../installation/) section in this documentation.
+
+## Test Case - `item-batch-processor`
+This is a fake example of a StepFunction called the `item-batch-processor` that the VeryRealCompany use in their business. The company has made it integral that this component be performance tested as it must always be able to finish executing within a minute for a **really good reason**. The average load is about 10 executions a second.
+
+### Architecture
+
+The `item-batch-processor` performs some batch processing on some internal data items using the Map state. Each item undergoes individual processing based on some logic which is done by a lambda. If an item requires additional manual processing, it will be flagged and placed into a manual processing queue for further human intervention. That might look something like this: 
+
+![A stepfunction that processes some items](../../../assets/item-batch-processor.svg)
+
+### Scenario
+
+From the introduction we could deduce the following load scenario:
+
+- Start the StepFunction executing with realistic data for processing
+- Check that the StepFunction finished executing after 60 seconds.
+
+
+### Simulation
+
+Here would be an example of what we would need to performance test this component:
+
+```scala
+package simulation
+
+import dev.joss.gatling.sfn.Predef._
+import dev.joss.gatling.sfn.protocol.{SfnProtocol, SfnProtocolBuilder}
+import io.gatling.core.Predef._
+import io.gatling.core.scenario.Simulation
+import io.gatling.core.structure.{PopulationBuilder, ScenarioBuilder}
+import software.amazon.awssdk.regions.Region
+import software.amazon.awssdk.auth.credentials.{
+  AwsSessionCredentials,
+  StaticCredentialsProvider
+}
+import software.amazon.awssdk.http.apache.ApacheHttpClient
+import software.amazon.awssdk.services.sfn.SfnClient
+import software.amazon.awssdk.services.sfn.model.HistoryEventType.WAIT_STATE_EXITED
+
+import java.net.URI
+import scala.concurrent.duration.DurationInt
+import scala.language.postfixOps
+class ExampleSimulation extends Simulation {
+  var sfnClient: SfnClient = SfnClient
+    .builder()
+    .region(Region.EU_WEST_1)
+    .build()
+
+  private var sfnProtocol: SfnProtocolBuilder = sfn.client(sfnClient)
+
+  private var sfnArn =
+    "arn:aws:states:eu-west-1:000000000000:stateMachine:item-batch-processor"
+
+  private val scn: ScenarioBuilder = scenario("Check item-batch-processor execution")
+    .exec(
+      sfn("Start item-batch-processor Execution").startExecution
+        .arn(sfnArn)
+        .payload("{[\"items\": [...]]}")
+    )
+    .pause(60.seconds)
+    .exec(
+      sfn("Check item-batch-processor execution completion").checkSucceeded
+    )
+
+  private val requests: PopulationBuilder = scn.inject {
+    constantUsersPerSec(10) during (60 seconds)
+  }
+  setUp(requests).protocols(sfnProtocol)
+
+}
+
+```
+
+What does this all mean?
+
+1. Create a StepFunction client that will be used to make the requests.
+2. Create the `SfnProtocol` which will tell Gatling Simulation to make StepFunction executions.
+3. Specify the ARN for the StepFunction we want under load.
+4. Create the scenario:
+    1. Use `startExecution` to start an execution with a given ARN and payload.
+    2. Wait the maximum ammount of time using `pause` to allow for the executions to complete.
+    3. Check the status of an execution by using `checkSucceeded` .
+5. Finish setting up the scenario by defining the `PopulationBuilder` and calling `setUp`.
+

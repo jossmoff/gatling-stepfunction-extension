@@ -1,0 +1,526 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" class="sc-jhfVAM clruJO graph" data-testid="graph" role="img" aria-labelledby="polymath-graph-title" width="395" height="656">
+<title id="polymath-graph-title">Workflow Studio State Machine Graph</title>
+<g transform="translate(12,12)" class="new-look-graph">
+<g class="nodes">
+<g class="node-container" transform="translate(185.5,22)">
+<g>
+<circle class="sc-cHPgQl eYiRhX shape" r="22"/>
+<text class="sc-hZFzCs gamSgh label">
+<tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">Start</tspan>
+</text>
+</g>
+</g>
+<g class="node-container" transform="translate(185.5,315.75)">
+<g class="sc-ESujJ jgStve node state container Map" data-state-id="MapItems" data-state-type="Map">
+<g class="new-look-state-node ">
+<g class="bounding-box" transform="translate(0,5)">
+<g class="shape new-look-state-node-sub">
+<rect rx="3" ry="3" x="-185.5" y="-236.75" width="371" height="468.5" class="sc-gHLcSH hChcoz"/>
+<rect x="-105" y="-192.75" width="210" height="26" class="sc-gHLcSH sc-djUGQo hChcoz gWrJqq"/>
+<svg x="-90" y="-196.25" width="25" height="25" viewBox="0 -8 25 25" xmlns="http://www.w3.org/2000/svg">
+<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.867687044">
+<g id="ONE-MAP---graph---inline-map" transform="translate(-55.000000, -217.000000)" fill="#687078" fill-rule="nonzero">
+<g id="Group-15" transform="translate(36.000000, 213.000000)">
+<g id="script" transform="translate(19.000000, 4.000000)">
+<path d="M11.60121,15.4462891 C12.5601274,15.4462891 13.2010167,15.2896753 13.5238779,14.9764478 C13.8467393,14.6632203 14.0081699,14.0388817 14.0081699,13.1034319 L14.0081699,12.7383526 C14.0081699,12.1034319 14.1135348,10.6632203 14.3242646,10.4177176 C14.5349944,10.172215 14.9129549,10.0494637 15.4581458,10.0494637 L15.8177397,10.0494637 L15.8177397,6.83676525 L15.4581458,6.83676525 C14.9129549,6.83676525 14.5349944,6.71507213 14.3242646,6.47168589 C14.1135348,6.22829964 14.0081699,4.7870298 14.0081699,4.14787636 L14.0081699,3.782797 C14.0081699,2.84734726 13.8467393,2.22406684 13.5238779,1.91295573 C13.2010167,1.60184462 12.5601274,1.44628906 11.60121,1.44628906 L9.8177397,1.44628906 L9.8177397,3.65263827 L10.519528,3.65263827 C10.9255213,3.65263827 11.1971501,3.74364356 11.3344144,3.92565414 C11.4716788,4.10766472 11.540311,5.49708271 11.540311,6.09390811 L11.540311,6.42089224 C11.540311,7.11930494 11.6340761,7.61031023 11.8216063,7.89390811 C12.0091365,8.17750599 12.3464975,8.35951658 12.8336895,8.43993986 C12.3503642,8.52882875 12.0139698,8.71718853 11.8245063,9.00501922 C11.6350428,9.29284991 11.540311,9.7838552 11.540311,10.4780351 L11.540311,10.7796224 C11.540311,11.3849134 11.4707122,12.7785642 11.3315144,12.9605748 C11.1923168,13.1425854 10.9216547,13.2335906 10.519528,13.2335906 L9.8177397,13.2335906 L9.8177397,15.4462891 L11.60121,15.4462891 Z" id="}"/>
+<path d="M3.03295652,15.4462891 C3.99187387,15.4462891 4.63276319,15.2896753 4.95562448,14.9764478 C5.27848577,14.6632203 5.43991641,14.0388817 5.43991641,13.1034319 L5.43991641,12.7383526 C5.43991641,12.1034319 5.54528132,10.6632203 5.75601114,10.4177176 C5.96674096,10.172215 6.34470133,10.0494637 6.88989225,10.0494637 L7.24948625,10.0494637 L7.24948625,6.83676525 L6.88989225,6.83676525 C6.34470133,6.83676525 5.96674096,6.71507213 5.75601114,6.47168589 C5.54528132,6.22829964 5.43991641,4.7870298 5.43991641,4.14787636 L5.43991641,3.782797 C5.43991641,2.84734726 5.27848577,2.22406684 4.95562448,1.91295573 C4.63276319,1.60184462 3.99187387,1.44628906 3.03295652,1.44628906 L1.24948625,1.44628906 L1.24948625,3.65263827 L1.95127455,3.65263827 C2.35726778,3.65263827 2.62889659,3.74364356 2.76616097,3.92565414 C2.90342535,4.10766472 2.97205754,4.49708271 2.97205754,5.09390811 L2.97205754,5.42089224 C2.97205754,6.11930494 3.06582265,7.61031023 3.25335285,7.89390811 C3.44088306,8.17750599 3.7782441,8.35951658 4.26543598,8.43993986 C3.7821107,8.52882875 3.44571631,8.71718853 3.25625281,9.00501922 C3.0667893,9.29284991 2.97205754,9.7838552 2.97205754,10.4780351 L2.97205754,10.7796224 C2.97205754,11.3849134 2.9024587,12.7785642 2.76326102,12.9605748 C2.62406334,13.1425854 2.35340119,13.2335906 1.95127455,13.2335906 L1.24948625,13.2335906 L1.24948625,15.4462891 L3.03295652,15.4462891 Z" id="}-copy" transform="translate(4.249486, 8.446289) scale(-1, 1) translate(-4.249486, -8.446289) "/>
+</g>
+</g>
+</g>
+</g>
+<style data-styled="true" data-styled-version="5.3.5">.jgStve{cursor:pointer;}/*!sc*/
+data-styled.g111[id="sc-ESujJ"]{content:"jgStve,"}/*!sc*/
+.kYMAGd{stroke:#555;background-color:#555;stroke-width:1px;}/*!sc*/
+data-styled.g112[id="sc-jWEIYm"]{content:"kYMAGd,"}/*!sc*/
+.hhENig{stroke-width:0;stroke:none;fill:#f2f3f3;}/*!sc*/
+data-styled.g113[id="sc-eEOqmf"]{content:"hhENig,"}/*!sc*/
+.cjyLkr{font-size:10px;line-height:12.5;stroke:none;}/*!sc*/
+data-styled.g114[id="sc-fmRtwQ"]{content:"cjyLkr,"}/*!sc*/
+.bxZfAZ{fill:var(--color-text-form-secondary-icb4vu,#687078);}/*!sc*/
+data-styled.g149[id="sc-dSuTWQ"]{content:"bxZfAZ,"}/*!sc*/
+.gamSgh{font-weight:400;font-size:12px;line-height:16px;font-family:Amazon Ember,Arial,Roboto,Arial,sans-serif;text-shadow:none;fill:var(--color-text-body-default-4colr5,#16191f);}/*!sc*/
+data-styled.g150[id="sc-hZFzCs"]{content:"gamSgh,"}/*!sc*/
+.eYiRhX{fill:#fff9cc;stroke:var(--color-text-form-secondary-icb4vu,#687078);stroke-width:0.6px;}/*!sc*/
+data-styled.g151[id="sc-cHPgQl"]{content:"eYiRhX,"}/*!sc*/
+.flNKjf{fill:#fff9cc;stroke:var(--color-text-form-secondary-icb4vu,#687078);stroke-width:0.6px;}/*!sc*/
+data-styled.g152[id="sc-KfMfS"]{content:"flNKjf,"}/*!sc*/
+.hChcoz{stroke:var(--color-border-control-default-zx2mvl,#687078);stroke-width:1px;fill:var(--color-background-container-content-v5h5oj,#ffffff);opacity:0.5;}/*!sc*/
+.node &gt; .new-look-state-node.has-errors &gt; .bounding-box &gt; .sc-gHLcSH{stroke:var(--color-border-status-error-jb9vli,#d13212);fill:var(--color-background-status-error-hrmert,#fdf3f1);}/*!sc*/
+.selected &gt; .node &gt; .new-look-state-node &gt; .bounding-box &gt; .sc-gHLcSH{stroke:var(--color-border-status-info-lqyesl,#0073bb);fill:var(--color-background-status-info-y7xysq,#f1faff);}/*!sc*/
+.selected &gt; .node &gt; .new-look-state-node.has-errors &gt; .bounding-box &gt; .sc-gHLcSH{stroke:var(--color-border-status-error-jb9vli,#d13212);fill:#fde0da;}/*!sc*/
+data-styled.g153[id="sc-gHLcSH"]{content:"hChcoz,"}/*!sc*/
+.gWrJqq{opacity:1;}/*!sc*/
+data-styled.g154[id="sc-djUGQo"]{content:"gWrJqq,"}/*!sc*/
+</style>
+<style>
+.new-look-state-node &gt; rect:first-of-type {
+  stroke: #687078;
+  stroke-width: 1px;
+  fill: #FFFFFF;
+}
+
+.new-look-state-node .error-icon circle {
+ stroke-linejoin: round;
+}
+
+.new-look-state-node .error-icon circle, .new-look-state-node .error-icon path {
+ stroke: var(--color-border-status-error-jb9vli, #d13212);
+ fill: none;
+ stroke-width: 2px;
+}
+
+.new-look-state-node.has-errors &gt; rect:first-of-type {
+ stroke: var(--color-border-status-error-jb9vli, #d13212);
+ fill: var(--color-background-status-error-hrmert, #fdf3f1);
+}
+
+.new-look-state-node .handle path {
+  stroke: var(--color-border-dropdown-item-hover-jn30h1, #879596);
+  stroke-width: 1px;
+  fill: none;
+}
+
+.new-look-state-node {
+  font-weight: 400;
+  font-family: Amazon Ember, Arial, Roboto, Arial, sans-serif;
+  text-shadow: none;
+}
+
+.new-look-state-node .line1 {
+  fill: #687078;
+  font-size: 12px;
+}
+
+.selected.node &gt; .new-look-state-node &gt; rect,
+.selected.node &gt; .new-look-state-node &gt; .new-look-state-node &gt; rect,
+.selected.node &gt; .new-look-state-node &gt; .bounding-box &gt; .new-look-state-node-sub &gt; rect
+ {
+  stroke: var(--color-border-status-info-lqyesl, #0073bb);
+  fill: var(--color-background-status-info-y7xysq, #f1faff);
+  stroke-width: 1px;
+}
+
+.new-look-state-node-sub .item-source.not-specified {
+  height: 15px;
+  color: #687078;
+  font-family: "Amazon Ember";
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 16px;
+  font-weight: 400;
+}
+.new-look-state-node-sub .item-source .item-source_name{
+  font-weight: 600;
+}
+.new-look-state-node-sub .item-source.not-specified .item-source_name{
+  font-weight: 400;
+}
+
+.new-look-state-node-sub .item-source.not-specified {
+  font-style: italic;
+}
+
+
+
+.new-look-state-node-sub .item-source
+.selected.node &gt; .new-look-state-node.has-errors &gt; rect,
+.selected.node &gt; .new-look-state-node.has-errors &gt; .new-look-state-node &gt; rect,
+{
+ stroke: var(--color-border-status-error-jb9vli, #d13212);
+ fill: #fde0da;
+}
+
+.new-look-graph .drag-source {
+  opacity: 0.2;
+}
+
+.new-look-graph .edge, .new-look-graph path.starting-connection {
+  stroke-width: 1px;
+  stroke: var(--color-text-form-secondary-icb4vu, #687078);
+  marker-end: url(#large-arrowhead);
+}
+
+.new-look-graph .edge-label {
+  cursor: pointer;
+}
+
+.new-look-graph .edge-label rect {
+  stroke-width: 1px;
+  stroke: var(--color-border-control-default-zx2mvl, #687078);
+  fill: var(--color-background-container-header-gnwbip, #fafafa);
+}
+
+.new-look-graph .edge-label.selected rect {
+  stroke: var(--color-border-status-info-lqyesl, #0073bb);
+  fill: var(--color-background-status-info-y7xysq, #f1faff);
+  stroke-width: 0.6px;
+}
+
+
+
+.new-look-graph .edge-label .label {
+  fill: var(--color-text-form-secondary-icb4vu, #687078);
+  font-family: Amazon Ember, Arial, Roboto, Arial, sans-serif;
+}
+
+/* centering the shape text */
+@-moz-document url-prefix() {
+  .new-look-graph .shape + text,
+  .new-look-graph .edge-label text {
+    transform: translateY(3.5px);
+  }
+}
+
+.new-look-graph .edge path {
+  marker-end: url(#large-arrowhead) !important;
+}
+
+.new-look-graph .edge.selected path{
+  stroke: var(--color-border-status-info-lqyesl, #0073bb);
+  stroke-width: 1.1px;
+}
+
+.new-look-graph .edge.dragging-over path, .new-look-graph  g.dragging-over .starting-connection {
+  stroke: #5C86FF;
+  stroke-width: 2px;
+}
+
+.new-look-graph .edge.dragging-over path, .new-look-graph .dragging-over path.starting-connection {
+  marker-end: url(#large-highlighted-arrowhead) !important;
+}
+
+.new-look-graph .edge.dragging-over .edge-label text {
+  fill: #5C86FF;
+}
+
+#large-highlighted-arrowhead {
+  fill: #5C86FF;
+}
+
+#large-highlighted-arrowhead path {
+  stroke: none;
+}
+
+.new-look-graph .edge.drop-not-supported path, g.drop-not-supported .starting-connection {
+  stroke: red;
+}
+
+.new-look-graph .edge.drop-not-supported .edge-label text {
+  fill: red;
+}
+
+.new-look-graph .edge.drop-not-supported path {
+  marker-end: url(#large-error-arrowhead) !important;
+}
+
+#large-error-arrowhead {
+  fill: red;
+}
+
+
+.node.Placeholder.dragging-over rect {
+  stroke: var(--color-border-status-info-lqyesl, #0073bb);
+  fill: var(--color-background-status-info-y7xysq, #f1faff);
+  stroke-width: 2px;
+}
+
+.node.Placeholder.dragging-over .label {
+  fill: var(--color-text-status-info-ljzs7r, #0073bb);
+}
+
+g.Placeholder rect {
+  stroke-dasharray: 5 4;
+  stroke: var(--color-border-dropdown-item-hover-jn30h1, #879596);
+  fill: var(--color-background-control-default-3975zi, #ffffff);
+  stroke-width: 1px;
+}
+
+g.Placeholder .label {
+  font-style: italic;
+  fill: var(--color-text-input-placeholder-j38kg2, #687078);
+}
+
+.node.Placeholder.drop-not-supported rect {
+  stroke: red;
+}
+
+.node.Placeholder.drop-not-supported .label {
+  fill: red;
+}
+</style>
+<style>.line2 { font-size: 14px }</style>
+</svg>
+<text x="-65" y="-175.75" class="line1">
+<tspan class="item-source" xml:space="preserve" text-anchor="start">
+<tspan>Item source</tspan>
+<tspan class="item-source_name">
+<tspan>: JSON Payload</tspan>
+</tspan>
+</tspan>
+</text>
+</g>
+<g class="content" transform="translate(-185.5,-236.75)">
+<g class="branch" transform="translate(20,124)">
+<g transform="">
+<g class="nodes">
+<g class="node-container" transform="translate(165.5,24.5)">
+<g class="sc-ESujJ jgStve node state Task" data-testid="graph-ProcessItems" data-state-id="ProcessItems" data-state-type="Task">
+<g class="new-look-state-node ">
+<rect x="-120" y="-24.5" width="240" height="49" rx="3" ry="3"/>
+<g class="handle" transform="translate(-120,-24.5)">
+<path d="M5,16 L5,34 M8,16 L8,34"/>
+</g>
+<g class="icon" transform="translate(-104,-24)">
+<rect fill="var(--color-background-container-header-gnwbip, #fafafa)" x="0.0361026108" y="0.0181291967" width="48" height="48"/>
+<line x1="47.5" y1="0.49122807" x2="47.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<line x1="0.5" y1="0.49122807" x2="0.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<use href="#icon-service-lam">
+<title>Lambda</title>
+</use>
+</g>
+<g class="text-lines" transform="translate(-48,-24.5)">
+<text transform="translate(0,17)" class="line1">
+<tspan xml:space="preserve" text-anchor="start">Lambda: Invoke</tspan>
+</text>
+<text transform="translate(0,35.5)" class="line2 label">
+<tspan xml:space="preserve" text-anchor="start">ProcessItems</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+<g class="node-container" transform="translate(165.5,108.5)">
+<g class="sc-ESujJ jgStve node state Choice" data-testid="graph-NeedsManualProcessing" data-state-id="NeedsManualProcessing" data-state-type="Choice">
+<g class="new-look-state-node ">
+<rect x="-120" y="-24.5" width="240" height="49" rx="3" ry="3"/>
+<g class="handle" transform="translate(-120,-24.5)">
+<path d="M5,16 L5,34 M8,16 L8,34"/>
+</g>
+<g class="icon" transform="translate(-104,-24)">
+<rect fill="var(--color-background-container-header-gnwbip, #fafafa)" x="0.0361026108" y="0.0181291967" width="48" height="48"/>
+<line x1="47.5" y1="0.49122807" x2="47.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<line x1="0.5" y1="0.49122807" x2="0.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<use href="#icon-flow-choice"/>
+</g>
+<g class="text-lines" transform="translate(-48,-24.5)">
+<text transform="translate(0,17)" class="line1">
+<tspan xml:space="preserve" text-anchor="start">Choice state</tspan>
+</text>
+<text transform="translate(0,35.5)" class="line2 label">
+<tspan xml:space="preserve" text-anchor="start">NeedsManualProcessing</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+<g class="node-container" transform="translate(165.5,209)">
+<g class="sc-ESujJ jgStve node state Task" data-testid="graph-Send Item to Manual Processing Queue" data-state-id="Send Item to Manual Processing Queue" data-state-type="Task">
+<g class="new-look-state-node ">
+<rect x="-165.5" y="-24.5" width="331" height="49" rx="3" ry="3"/>
+<g class="handle" transform="translate(-165.5,-24.5)">
+<path d="M5,16 L5,34 M8,16 L8,34"/>
+</g>
+<g class="icon" transform="translate(-149.5,-24)">
+<rect fill="var(--color-background-container-header-gnwbip, #fafafa)" x="0.0361026108" y="0.0181291967" width="48" height="48"/>
+<line x1="47.5" y1="0.49122807" x2="47.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<line x1="0.5" y1="0.49122807" x2="0.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<use href="#icon-service-sqs">
+<title>Simple Queue Service</title>
+</use>
+</g>
+<g class="text-lines" transform="translate(-93.5,-24.5)">
+<text transform="translate(0,17)" class="line1">
+<tspan xml:space="preserve" text-anchor="start">SQS: SendMessage</tspan>
+</text>
+<text transform="translate(0,35.5)" class="line2 label">
+<tspan xml:space="preserve" text-anchor="start">Send Item to Manual Processing Queue</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+<g class="node-container" transform="translate(165.5,276.5)">
+<g>
+<circle class="sc-KfMfS flNKjf shape" r="8"/>
+</g>
+</g>
+</g>
+<g class="edges">
+<g class="sc-jWEIYm kYMAGd edge">
+<path id="state-ProcessItems:state-NeedsManualProcessing:normal" d="M165.5,49L165.5,51.916666666666664C165.5,54.833333333333336,165.5,60.666666666666664,165.5,66.5C165.5,72.33333333333333,165.5,78.16666666666667,165.5,81.08333333333333L165.5,84" marker-end="url(#arrowhead)" fill="none"/>
+</g>
+<g class="sc-jWEIYm kYMAGd edge">
+<path id="state-NeedsManualProcessing:state-Send Item to Manual Processing Queue:choiceRule:0" d="M165.5,133L165.5,137.29166666666666C165.5,141.58333333333334,165.5,150.16666666666666,165.5,158.75C165.5,167.33333333333334,165.5,175.91666666666666,165.5,180.20833333333334L165.5,184.5" marker-end="url(#arrowhead)" fill="none"/>
+<g data-testid="graph-NeedsManualProcessing-0" class="edge-label" transform="translate(165.5,158.75)">
+<rect x="-81" y="-8.25" width="162" height="16.5" class="sc-eEOqmf hhENig"/>
+<text class="sc-fmRtwQ cjyLkr label">
+<tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">$.needsManualProcessing == true</tspan>
+<title>$.needsManualProcessing == true</title>
+</text>
+</g>
+</g>
+<g class="sc-jWEIYm kYMAGd edge">
+<path id="state-Send Item to Manual Processing Queue:end:normal" d="M165.5,233.5L165.5,236.41666666666666C165.5,239.33333333333334,165.5,245.16666666666666,165.5,251C165.5,256.8333333333333,165.5,262.6666666666667,165.5,265.5833333333333L165.5,268.5" marker-end="url(#arrowhead)" fill="none"/>
+</g>
+</g>
+</g>
+</g>
+<g class="sc-jWEIYm kYMAGd">
+<path id="MapItems-ProcessItems" class="path starting-connection" d="M185.5,69L185.5,73.58333333333333C185.5,78.16666666666667,185.5,87.33333333333333,185.5,91.91666666666667C185.5,96.5,185.5,96.5,185.5,101.08333333333333C185.5,105.66666666666667,185.5,114.83333333333333,185.5,119.41666666666667L185.5,124" fill="none"/>
+</g>
+</g>
+</g>
+<g class="new-look-state-node ">
+<rect x="-120" y="-236.75" width="240" height="49" rx="3" ry="3"/>
+<g class="handle" transform="translate(-120,-236.75)">
+<path d="M5,16 L5,34 M8,16 L8,34"/>
+</g>
+<g class="icon" transform="translate(-104,-236.25)">
+<rect fill="var(--color-background-container-header-gnwbip, #fafafa)" x="0.0361026108" y="0.0181291967" width="48" height="48"/>
+<line x1="47.5" y1="0.49122807" x2="47.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<line x1="0.5" y1="0.49122807" x2="0.5" y2="47.5" stroke="var(--color-text-home-header-secondary-bkwtrh, #d5dbdb)" stroke-linecap="square"/>
+<use href="#icon-flow-map"/>
+</g>
+<g class="text-lines" transform="translate(-48,-236.75)">
+<text transform="translate(0,17)" class="line1">
+<tspan xml:space="preserve" text-anchor="start">Map state</tspan>
+</text>
+<text transform="translate(0,35.5)" class="line2 label">
+<tspan xml:space="preserve" text-anchor="start">MapItems</tspan>
+</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g class="node-container" transform="translate(185.5,609.5)">
+<g>
+<circle class="sc-cHPgQl eYiRhX shape" r="22"/>
+<text class="sc-hZFzCs gamSgh label">
+<tspan xml:space="preserve" text-anchor="middle" alignment-baseline="central">End</tspan>
+</text>
+</g>
+</g>
+</g>
+<g class="edges">
+<g class="sc-jWEIYm kYMAGd edge">
+<path id="state-MapItems:end:normal" d="M185.5,552.5L185.5,555.4166666666666C185.5,558.3333333333334,185.5,564.1666666666666,185.5,570C185.5,575.8333333333334,185.5,581.6666666666666,185.5,584.5833333333334L185.5,587.5" marker-end="url(#arrowhead)" fill="none"/>
+</g>
+<g class="sc-jWEIYm kYMAGd edge">
+<path id="start:state-MapItems" d="M185.5,44L185.5,46.916666666666664C185.5,49.833333333333336,185.5,55.666666666666664,185.5,61.5C185.5,67.33333333333333,185.5,73.16666666666667,185.5,76.08333333333333L185.5,79" marker-end="url(#arrowhead)" fill="none"/>
+</g>
+</g>
+<defs>
+<marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" class="sc-dSuTWQ bxZfAZ">
+<polygon points="0 0, 8 3, 0 6"/>
+</marker>
+<marker id="highlighted-arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto" class="sc-dSuTWQ bxZfAZ">
+<polygon points="0 0, 6 2, 0 4"/>
+</marker>
+<marker id="error-arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto" class="sc-dSuTWQ bxZfAZ">
+<polygon points="0 0, 6 2, 0 4"/>
+</marker>
+<marker id="large-arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" class="sc-dSuTWQ bxZfAZ">
+<polygon points="0 0, 10 4, 0 8"/>
+</marker>
+<marker id="large-highlighted-arrowhead" markerWidth="5.5" markerHeight="4" refX="4.5" refY="2" orient="auto" class="sc-dSuTWQ bxZfAZ">
+<polygon points="0 0, 5.5 2, 0 4"/>
+</marker>
+<marker id="large-error-arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" class="sc-dSuTWQ bxZfAZ">
+<polygon points="0 0, 10 4, 0 8"/>
+</marker>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-orange">
+<stop stop-color="#C8511B" offset="0%"/>
+<stop stop-color="#FF9900" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-turquoise">
+<stop stop-color="#055F4E" offset="0%"/>
+<stop stop-color="#56C0A7" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-blue">
+<stop stop-color="#2E27AD" offset="0%"/>
+<stop stop-color="#527FFF" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-pink">
+<stop stop-color="#B0084D" offset="0%"/>
+<stop stop-color="#FF4F8B" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-red">
+<stop stop-color="#BD0816" offset="0%"/>
+<stop stop-color="#FF5252" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-green">
+<stop stop-color="#1B660F" offset="0%"/>
+<stop stop-color="#6CAE3E" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-purple">
+<stop stop-color="#4D27A8" offset="0%"/>
+<stop stop-color="#A166FF" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-grey">
+<stop stop-color="#DCDCDC" offset="0%"/>
+<stop stop-color="#F6F5F7" offset="100%"/>
+</linearGradient>,<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-ag">
+<stop stop-color="#BC1356" offset="0%"/>
+<stop stop-color="#F34482" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-athena">
+<stop stop-color="#5930B5" offset="0%"/>
+<stop stop-color="#945DF2" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-emr">
+<stop stop-color="#5930B5" offset="0%"/>
+<stop stop-color="#945DF2" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-glue">
+<stop stop-color="#5930B5" offset="0%"/>
+<stop stop-color="#945DF2" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-sns">
+<stop stop-color="#BC1356" offset="0%"/>
+<stop stop-color="#F34482" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-states">
+<stop stop-color="#BC1356" offset="0%"/>
+<stop stop-color="#F34482" offset="100%"/>
+</linearGradient>
+<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-generic">
+<stop stop-color="#ccc" offset="0%"/>
+<stop stop-color="#ddd" offset="100%"/>
+</linearGradient>
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" id="icon-flow-map">
+<g transform="translate(7.250000, 12.250000)" fill="#0073BB" fill-rule="nonzero">
+<path d="M18.75,6.75 C19.3022847,6.75 19.75,7.19771525 19.75,7.75 L19.75,10.75 C19.75,11.3022847 19.3022847,11.75 18.75,11.75 L17,11.75 L17,14.75 L18.75,14.75 C19.3022847,14.75 19.75,15.1977153 19.75,15.75 L19.75,18.75 C19.75,19.3022847 19.3022847,19.75 18.75,19.75 L13.75,19.75 C13.1977153,19.75 12.75,19.3022847 12.75,18.75 L12.75,15.75 C12.75,15.1977153 13.1977153,14.75 13.75,14.75 L15.5,14.75 L15.5,11.75 L13.75,11.75 C13.1977153,11.75 12.75,11.3022847 12.75,10.75 L12.75,7.75 C12.75,7.19771525 13.1977153,6.75 13.75,6.75 L18.75,6.75 Z M18.25,16.25 L14.25,16.25 L14.25,18.25 L18.25,18.25 L18.25,16.25 Z M18.25,8.25 L14.25,8.25 L14.25,10.25 L18.25,10.25 L18.25,8.25 Z"/>
+<path d="M4.36774058,12.9781551 L4.25581637,12.9873783 L4.25581637,12.9873783 L4.16664164,12.9827819 L4.16664164,12.9827819 L4.09909543,12.9721471 L4.09909543,12.9721471 L4.01772926,12.9506961 L4.01772926,12.9506961 L3.9143938,12.9083506 L3.9143938,12.9083506 L3.84086306,12.8661585 L3.84086306,12.8661585 L3.80378835,12.840349 L3.80378835,12.840349 L3.71966991,12.7677308 L0.219669914,9.26773081 C-0.0732233047,8.97483759 -0.0732233047,8.49996385 0.219669914,8.20707064 C0.485936477,7.94080407 0.902600159,7.91659802 1.19621165,8.13445248 L1.28033009,8.20707064 L3.5,10.427 L3.5,5.75 C3.5,2.64821472 5.95601719,0.120062989 9.02944429,0.00415208345 L9.25,-4.97379915e-14 L24.25,-4.97379915e-14 C27.3101239,-4.97379915e-14 29.8183331,2.39279152 29.9905671,5.41800288 L29.9990775,5.65628924 L30,7.75 C30,8.16421356 29.6642136,8.5 29.25,8.5 C28.8357864,8.5 28.5,8.16421356 28.5,7.75 L28.4992379,5.66855413 C28.4572345,3.42607261 26.6797069,1.6129038 24.4594105,1.50507399 L24.25,1.5 L9.25,1.5 C6.97182541,1.5 5.11231326,3.29250701 5.00490093,5.54408366 L5,5.75 L5,10.426 L7.21966991,8.20707064 L7.30378835,8.13445248 C7.59739984,7.91659802 8.01406352,7.94080407 8.28033009,8.20707064 C8.54659665,8.4733372 8.5708027,8.89000088 8.35294824,9.18361237 L8.28033009,9.26773081 L4.78033009,12.7677308 C4.74270234,12.8053586 4.70207113,12.8381523 4.65920816,12.866112 L4.58539483,12.9084563 L4.58539483,12.9084563 L4.50825575,12.9417254 L4.50825575,12.9417254 L4.44163507,12.9626313 L4.44163507,12.9626313 L4.36774058,12.9781551 L4.36774058,12.9781551 Z"/>
+<path d="M29.1567308,12.467303 L29.2441836,12.4615381 L29.2441836,12.4615381 L29.3612017,12.4697569 L29.3612017,12.4697569 L29.4099419,12.4786795 L29.4099419,12.4786795 L29.4761141,12.4962504 L29.4761141,12.4962504 L29.5349097,12.5175276 L29.5349097,12.5175276 L29.6051875,12.5507277 L29.6051875,12.5507277 L29.6962117,12.6085674 L29.6962117,12.6085674 L29.7803301,12.6811856 L33.2803301,16.1811856 C33.5732233,16.4740788 33.5732233,16.9489525 33.2803301,17.2418457 C33.0140635,17.5081123 32.5973998,17.5323184 32.3037883,17.3144639 L32.2196699,17.2418457 L30,15.0225381 L30,19.75 C30,22.8517853 27.5439828,25.379937 24.4705557,25.4958479 L24.25,25.5 L9.25,25.5 C6.22364937,25.5 3.73212863,23.1580245 3.51530256,20.1724864 L3.50299507,19.9226196 L3.5,17.75 C3.5,17.3357864 3.83578644,17 4.25,17 C4.62969577,17 4.94349096,17.2821539 4.99315338,17.6482294 L5,17.75 L5.00247606,19.8966995 C5.07738217,22.1119658 6.84520232,23.8893416 9.04275865,23.9950272 L9.25,24 L24.25,24 C26.5281746,24 28.3876867,22.207493 28.4950991,19.9559163 L28.5,19.75 L28.5,15.0215381 L26.2803301,17.2418457 L26.1962117,17.3144639 C25.9026002,17.5323184 25.4859365,17.5081123 25.2196699,17.2418457 C24.9534034,16.9755792 24.9291973,16.5589155 25.1470518,16.265304 L25.2196699,16.1811856 L28.7196699,12.6811856 L28.7969693,12.6136874 L28.7969693,12.6136874 L28.8948226,12.5507257 L28.8948226,12.5507257 L28.96499,12.5175687 L28.96499,12.5175687 L29.0426978,12.4905912 L29.0426978,12.4905912 L29.0900352,12.4786762 L29.0900352,12.4786762 L29.1567308,12.467303 L29.1567308,12.467303 Z"/>
+</g>
+</g>
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" id="icon-flow-choice">
+<g transform="translate(9.252020, 8.729185)" fill="#0073BB" fill-rule="nonzero">
+<path d="M13.7176503,0.219669914 C13.9839168,-0.0465966484 14.4005805,-0.0708026996 14.694192,0.147051761 L14.7783104,0.219669914 L26.7991257,12.2404852 C27.0653923,12.5067518 27.0895983,12.9234154 26.8717439,13.2170269 L26.7991257,13.3011454 L19.848,20.251 L27.063,27.58 L27.0635443,24.4725437 C27.0635443,24.0583302 27.3993308,23.7225437 27.8135443,23.7225437 C28.1901021,23.7225437 28.5018441,24.0000532 28.5554124,24.3617142 L28.5635443,24.4725437 L28.5635443,29.4222912 C28.5635443,29.4735748 28.5583971,29.5236562 28.5485912,29.5720469 L28.5290567,29.6477745 L28.4912259,29.7440224 L28.4674556,29.7898473 L28.4399848,29.8348433 L28.3922808,29.8993609 L28.3266417,29.9693147 L28.2903734,30.0012261 L28.2103598,30.0588356 L28.1372883,30.0990133 L28.0408973,30.1372113 L27.9243738,30.1641593 C27.8841362,30.1698129 27.8491297,30.1722912 27.8135443,30.1722912 L22.8637969,30.1722912 C22.4495833,30.1722912 22.1137969,29.8365048 22.1137969,29.4222912 C22.1137969,29.0457334 22.3913063,28.7339914 22.7529674,28.6804231 L22.8637969,28.6722912 L26.032,28.672 L18.787,21.312 L14.7783104,25.3219606 C14.5120439,25.5882272 14.0953802,25.6124333 13.8017687,25.3945788 L13.7176503,25.3219606 L9.63,21.234 L2.386,28.671 L5.69974747,28.6722912 L5.81057697,28.6804231 C6.17223802,28.7339914 6.44974747,29.0457334 6.44974747,29.4222912 C6.44974747,29.801987 6.16759359,30.1157822 5.80151803,30.1654446 L5.69974747,30.1722912 L0.75,30.1722912 L0.645175107,30.1650238 L0.571316134,30.150876 L0.491748953,30.1266437 L0.399838514,30.0857012 L0.323957521,30.0396165 L0.243169757,29.975129 L0.170912131,29.8989347 L0.109961584,29.8134582 L0.0656949991,29.7297074 L0.0297396696,29.6320944 L0.0076057584,29.5294944 L6.67910172e-13,29.4222912 L6.67910172e-13,24.4725437 L0.00813192572,24.3617142 C0.0617002376,24.0000532 0.373442216,23.7225437 0.75,23.7225437 C1.12969577,23.7225437 1.44349096,24.0046976 1.49315338,24.3707732 L1.5,24.4725437 L1.499,27.433 L8.569,20.174 L1.69683498,13.3011454 C1.43056842,13.0348788 1.40636237,12.6182151 1.62421683,12.3246036 L1.69683498,12.2404852 L13.7176503,0.219669914 Z M14.3527697,23.728356 L25.2081355,12.7708153 L14.2479803,1.81066017 L3.28782524,12.7708153 L9.616,19.099 L14.3527697,23.728356 Z"/>
+<path d="M15.2319803,14.0468153 L15.2319803,13.2668153 C16.0033137,12.8508153 16.5579803,12.4218153 16.8959803,11.9798153 C17.2339803,11.5378153 17.4029803,11.0178153 17.4029803,10.4198153 C17.4029803,9.65714861 17.151647,9.06131528 16.6489803,8.63231528 C16.1463137,8.20331528 15.448647,7.98881528 14.5559803,7.98881528 C13.6979803,7.98881528 12.874647,8.19248195 12.0859803,8.59981528 L12.0859803,8.59981528 L12.0859803,10.3288153 C12.8313137,9.98214861 13.4943137,9.80881528 14.0749803,9.80881528 C14.395647,9.80881528 14.6404803,9.87814861 14.8094803,10.0168153 C14.9784803,10.1554819 15.0629803,10.3591486 15.0629803,10.6278153 C15.0629803,10.9138153 14.9763137,11.1651486 14.8029803,11.3818153 C14.629647,11.5984819 14.343647,11.8151486 13.9449803,12.0318153 L13.9449803,12.0318153 L13.1909803,12.4348153 L13.3339803,14.0468153 L15.2319803,14.0468153 Z M14.3089803,17.4398153 C14.7249803,17.4398153 15.0608137,17.3141486 15.3164803,17.0628153 C15.572147,16.8114819 15.6999803,16.4821486 15.6999803,16.0748153 C15.6999803,15.6674819 15.572147,15.3381486 15.3164803,15.0868153 C15.0608137,14.8354819 14.7249803,14.7098153 14.3089803,14.7098153 C13.8929803,14.7098153 13.557147,14.8354819 13.3014803,15.0868153 C13.0458137,15.3381486 12.9179803,15.6674819 12.9179803,16.0748153 C12.9179803,16.4821486 13.0458137,16.8114819 13.3014803,17.0628153 C13.557147,17.3141486 13.8929803,17.4398153 14.3089803,17.4398153 Z"/>
+</g>
+</g>
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" id="icon-service-lam">
+<polygon fill="url(#gradient-orange)" fill-rule="nonzero" points="0 0 48 0 48 48 0 48"/>
+<g transform="translate(11, 10)" fill="#FFFFFF">
+<path d="M26.5889213,27.8937088 L19.6925948,27.8937088 C19.4772752,27.8931074 19.2813916,27.7706914 19.1888047,27.578869 L9.43766764,7.45673404 L5.31218659,7.45673404 C5.00303594,7.45673404 4.75241983,7.20943823 4.75241983,6.90438337 L4.75241983,0.828526005 C4.75241983,0.523471153 5.00303594,0.276175335 5.31218659,0.276175335 L13.9325948,0.276175335 C14.1479143,0.276776788 14.3437979,0.399192787 14.4363848,0.591015217 L24.1427405,20.7131501 L26.5889213,20.7131501 C26.8980719,20.7131501 27.148688,20.9604459 27.148688,21.2655008 L27.148688,27.3413582 C27.148688,27.646413 26.8980719,27.8937088 26.5889213,27.8937088 Z M20.0452478,26.7890075 L26.0291545,26.7890075 L26.0291545,21.8178515 L23.7900875,21.8178515 C23.5747679,21.81725 23.3788843,21.694834 23.2862974,21.5030116 L13.5799417,1.38087667 L5.87755102,1.38087667 L5.87755102,6.3520327 L9.79591837,6.3520327 C10.0112379,6.35263416 10.2071215,6.47505016 10.2997085,6.66687259 L20.0452478,26.7890075 Z"/>
+<path d="M8.10542274,27.8937099 L0.82845481,27.8937099 C0.635054571,27.8940907 0.455155006,27.7959347 0.352653061,27.634104 C0.243858391,27.4681848 0.233185428,27.2575536 0.324664723,27.0817533 L7.93749271,11.3894708 C8.03007964,11.1976484 8.22596323,11.0752324 8.4412828,11.0746298 L8.4412828,11.0746298 C8.65533487,11.0742082 8.85089022,11.1942751 8.94507289,11.3839473 L12.5891545,18.7799228 C12.6634688,18.931712 12.6634688,19.1086786 12.5891545,19.2604679 L8.6148105,27.5457279 C8.53147526,27.7523199 8.33072312,27.8894609 8.10542274,27.8937099 L8.10542274,27.8937099 Z M1.72408163,26.7890075 L7.75276968,26.7890075 L11.4640233,19.0560981 L8.44688047,12.8973881 L1.72408163,26.7890075 Z"/>
+</g>
+</g>
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" id="icon-service-sqs">
+<polygon fill="url(#gradient-pink)" fill-rule="nonzero" points="0 0 48 0 48 48 0 48"/>
+<g transform="translate(5.142857, 8.571429)" fill="#FFFFFF">
+<path d="M8.75099274,5.82507289 C12.199558,2.33979238 17.1740722,0.891686988 21.9242217,1.99028157 C26.6743712,3.08887616 30.5345894,6.58024123 32.1466344,11.2359184 L33.35477,10.8087464 C31.1863432,4.52933615 25.3343647,0.324076433 18.7644552,0.324076433 C12.1945457,0.324076433 6.34256723,4.52933615 4.17414044,10.8087464 L5.38227603,11.2359184 C6.08212426,9.19538059 7.23452905,7.34438366 8.75099274,5.82507289 Z"/>
+<path d="M28.7651332,25.8892128 C23.227346,31.4887116 14.2568186,31.4887116 8.71903148,25.8892128 C7.20048733,24.3564411 6.04821374,22.4923718 5.35031477,20.4395335 L4.14217918,20.8667055 C5.88850894,25.9556154 10.0971359,29.7773089 15.2828622,30.9831348 C20.4685885,32.1889607 25.9022873,30.6093765 29.6664407,26.8018076 C31.3374905,25.1213581 32.6020195,23.0723312 33.3611622,20.8149271 L32.1530266,20.4006997 C31.4548,22.4692673 30.2955578,24.3472826 28.7651332,25.8892128 L28.7651332,25.8892128 Z"/>
+<path d="M7.76659995,15.8312536 C7.76933578,14.0274078 6.51284421,12.4729655 4.7659317,12.1190568 C3.01901918,11.7651481 1.26855982,12.7104093 0.585622431,14.3764553 C-0.0973149553,16.0425012 0.47760803,17.9649957 1.95860824,18.9676053 C3.43960846,19.970215 5.41392304,19.7735069 6.6735109,18.4978426 C7.37558993,17.7928824 7.76930507,16.8324026 7.76659995,15.8312536 L7.76659995,15.8312536 Z M5.75302663,17.5852478 C4.78372642,18.5164458 3.26411861,18.5164458 2.2948184,17.5852478 C1.59903522,16.8764869 1.39161219,15.8140139 1.76873463,14.8905142 C2.14585707,13.9670145 3.03376689,13.3631073 4.02072639,13.3588338 C4.66985355,13.3603379 5.29224775,13.6207849 5.75302663,14.0837318 C6.7063806,15.0513208 6.7063806,16.6176588 5.75302663,17.5852478 L5.75302663,17.5852478 Z"/>
+<path d="M36.3079903,13.2099708 C35.2440461,12.1325134 33.6438315,11.8101138 32.253574,12.3931165 C30.8633164,12.9761193 29.956826,14.3497025 29.956826,15.8733236 C29.956826,17.3969448 30.8633164,18.7705279 32.253574,19.3535307 C33.6438315,19.9365334 35.2440461,19.6141338 36.3079903,18.5366764 L36.3079903,18.5366764 C37.7605461,17.0656716 37.7605461,14.6809756 36.3079903,13.2099708 L36.3079903,13.2099708 Z M35.4002906,17.6176093 C34.4468607,18.5821591 32.9019044,18.5821591 31.9484746,17.6176093 C31.4894188,17.1548463 31.2313538,16.5259784 31.2313538,15.8700875 C31.2313538,15.2141965 31.4894188,14.5853286 31.9484746,14.1225656 C32.5587504,13.4675238 33.4725028,13.2002414 34.3337587,13.4248444 C35.1950145,13.6494474 35.8675571,14.3304123 36.0893821,15.2024539 C36.3112071,16.0744954 36.0472306,16.9996909 35.4002906,17.6176093 L35.4002906,17.6176093 Z"/>
+<path d="M13.5387893,22.1223324 C16.1596126,19.468688 21.4971429,19.468688 24.1179661,22.1223324 C24.2370286,22.2419044 24.3977295,22.3093142 24.5654237,22.3100292 C24.918458,22.3100292 25.2046489,22.0202543 25.2046489,21.6627988 C25.2056312,21.4907631 25.1389279,21.3254099 25.0192736,21.2032653 C23.7143164,19.7410388 23.0260497,17.8199564 23.1015981,15.8506706 C23.0267337,13.8814926 23.7149097,11.9606634 25.0192736,10.4980758 C25.2671163,10.2456317 25.2671163,9.83792512 25.0192736,9.58548105 C24.7699518,9.33453458 24.3672879,9.33453458 24.1179661,9.58548105 C21.4971429,12.2326531 16.1596126,12.2326531 13.5387893,9.58548105 C13.2894676,9.33453458 12.8868036,9.33453458 12.6374818,9.58548105 C12.3896392,9.83792512 12.3896392,10.2456317 12.6374818,10.4980758 C13.9534405,11.9556105 14.6532962,13.8770165 14.5871186,15.8506706 C14.6539827,17.8244365 13.9540344,19.7460968 12.6374818,21.2032653 C12.5178275,21.3254099 12.4511242,21.4907631 12.4521065,21.6627988 C12.4511242,21.8348346 12.5178275,22.0001878 12.6374818,22.1223324 C12.8868036,22.3732788 13.2894676,22.3732788 13.5387893,22.1223324 L13.5387893,22.1223324 Z M15.1943826,12.1808746 C17.5307809,13.1066362 20.1259746,13.1066362 22.4623729,12.1808746 C21.5673965,14.5457249 21.5673965,17.1620885 22.4623729,19.5269388 C20.1259746,18.6011772 17.5307809,18.6011772 15.1943826,19.5269388 C16.089359,17.1620885 16.089359,14.5457249 15.1943826,12.1808746 L15.1943826,12.1808746 Z"/>
+<path d="M26.6109443,18.5043149 L28.7651332,16.2972595 C29.0129759,16.0448154 29.0129759,15.6371088 28.7651332,15.3846647 L26.5981598,13.1905539 L25.69046,14.10348 L26.7835351,15.2034402 L23.8942373,15.2034402 L23.8942373,16.4979009 L26.7835351,16.4979009 L25.7032446,17.5917201 L26.6109443,18.5043149 Z"/>
+<path d="M11.1608717,18.5172595 L13.3406295,16.3102041 C13.5884722,16.05776 13.5884722,15.6500534 13.3406295,15.3976093 L11.1608717,13.1905539 L10.2595642,14.10348 L11.346247,15.2034402 L8.55283293,15.2034402 L8.55283293,16.4979009 L11.346247,16.4979009 L10.2595642,17.6046647 L11.1608717,18.5172595 Z"/>
+</g>
+</g>
+</defs>
+</g>
+</svg>
