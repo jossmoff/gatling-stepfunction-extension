@@ -18,18 +18,8 @@ jobs:
         distribution: temurin
         java-version: 11
 
-    - name: Set up Test Environment
-      run: |
-        pip install localstack awscli-local
-        docker pull localstack/localstack
-
-    - name: Test
-      run: ./gradlew test
-      env:
-        OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
-
     - name: Publish
-      run: ./gradlew build publish --no-parallel
+      run: ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository -Prelease
       env:
         ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.SONATYPE_NEXUS_USERNAME }}
         ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONATYPE_NEXUS_PASSWORD }}

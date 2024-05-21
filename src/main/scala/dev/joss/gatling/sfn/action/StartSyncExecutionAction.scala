@@ -1,4 +1,4 @@
-package uk.co.capitalone.services.decision.processor.utils
+package dev.joss.gatling.sfn.action
 
 import dev.joss.gatling.sfn.action.SfnActionBase
 import dev.joss.gatling.sfn.request.attributes.SfnExecuteAttributes

@@ -37,8 +37,8 @@ object StartSyncExecutionDslBuilder {
   }
 
   final class Payload(
-   requestName: Expression[String],
-   executionArn: Expression[String]
+      requestName: Expression[String],
+      executionArn: Expression[String]
   ) {
     def payload(payload: Expression[String]): StartSyncExecutionDslBuilder =
       StartSyncExecutionDslBuilder(
@@ -49,8 +49,8 @@ object StartSyncExecutionDslBuilder {
 }
 
 final case class StartSyncExecutionDslBuilder(
-   attributes: SfnExecuteAttributes,
-   factory: SfnExecuteAttributes => StartSyncExecutionActionBuilder
+    attributes: SfnExecuteAttributes,
+    factory: SfnExecuteAttributes => StartSyncExecutionActionBuilder
 ) {
   def build: ActionBuilder = factory(attributes)
 }
