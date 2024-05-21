@@ -1,0 +1,40 @@
+---
+title: Starting StepFunction Executions
+description: A reference page to how to start StepFunction Executions
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+
+
+
+The first and most important step to begin performance testing a StepFunction is being able to start its execution. To do this we can
+
+To do this, you pass a(n):
+- `arn`: The ARN to the StepFunction you want to execute
+- `payload`: The data you want to use when starting an execution
+
+
+
+<Tabs>
+	<TabItem label="Standard">
+		```scala
+	    sfn("Start item-batch-processor Execution").startExecution
+            .arn("arn:aws:states:eu-west-1:000000000000:stateMachine:your-sfn-name")
+            .payload("{\"data\": \"whatever-json-data-you-should-pass-in\"}")
+		```
+	</TabItem>
+	<TabItem label="Express (sync)">
+		```scala
+	    sfn("Start item-batch-processor Execution").startExecution
+            .arn("arn:aws:states:eu-west-1:000000000000:stateMachine:your-sfn-name")
+            .payload("{\"data\": \"whatever-json-data-you-should-pass-in\"}")
+		```
+	</TabItem>
+	<TabItem label="Express (aysnc)">
+		```scala
+	    sfn("Start item-batch-processor Execution").startExecution
+            .arn("arn:aws:states:eu-west-1:000000000000:stateMachine:your-sfn-name")
+            .payload("{\"data\": \"whatever-json-data-you-should-pass-in\"}")
+		```
+	</TabItem>
+</Tabs>

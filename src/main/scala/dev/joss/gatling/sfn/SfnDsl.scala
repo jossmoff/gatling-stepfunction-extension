@@ -1,5 +1,6 @@
 package dev.joss.gatling.sfn
 
+import dev.joss.gatling.sfn.action.StartSyncExecutionActionBuilder
 import dev.joss.gatling.sfn.protocol.{
   SfnProtocol,
   SfnProtocolBuilder,
@@ -42,6 +43,10 @@ trait SfnDsl {
 
   implicit def sfnDslBuilder2ActionBuilder(
       builder: StartExecutionDslBuilder
+  ): ActionBuilder = builder.build
+
+  implicit def sfnDslBuilder2ActionBuilder(
+      builder: StartSyncExecutionActionBuilder
   ): ActionBuilder = builder.build
 
   implicit def sfnDslBuilder2ActionBuilder(

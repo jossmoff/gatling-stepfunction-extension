@@ -1,0 +1,65 @@
+---
+title: Check Execution Success
+description: A reference page to how to start StepFunction Executions
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+
+Now we can successfully start an execution, what about checking it has succesfully executed? 
+
+## Check Succeeds
+The most straight forward check is to ensure that the stepfunction has successfully executed. You can do that using the following:
+
+<Tabs>
+	<TabItem label="Standard">
+		```scala
+	    // Start the exectuion
+		.pause(someAmmountOfTime)
+        .exec(
+            sfn("Check item-batch-processor execution completion").checkSucceeded
+        )
+		```
+	</TabItem>
+	<TabItem label="Express (sync)">
+	    <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.5.0
+	    </Card>
+	</TabItem>
+	<TabItem label="Express (aysnc)">
+        <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.4.0
+	    </Card>
+	</TabItem>
+</Tabs>
+
+## Check State Succeeded
+Instead of checking that the whole StepFunction has executed, it might be useful only to check up to a certain state. 
+To do this, you can supply:
+
+- `stateName`: The name of the state you want to check in the state machine
+- `stateType`: The type of state you want to check in the state machine 
+<Tabs>
+	<TabItem label="Standard">
+		```scala
+	    // Start the exectuion
+		.pause(someAmmountOfTime)
+        .exec(
+            sfn("Check item-batch-processor execution completion").checkStateSucceeded
+            .stateName("NameOfStateSucceeded")
+            .stateType(LAMBDA_FUNCTION_SUCCEEDED)
+        )
+		```
+	</TabItem>
+	<TabItem label="Express (sync)">
+	    <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.5.0
+	    </Card>
+	</TabItem>
+	<TabItem label="Express (aysnc)">
+        <Card title="Sorry :(" icon="error">
+		    Not yet supported. Planned for v1.4.0
+	    </Card>
+	</TabItem>
+</Tabs>
+
+For more information on the different `stateTypes`, see [here](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sfn/model/HistoryEventType.html).

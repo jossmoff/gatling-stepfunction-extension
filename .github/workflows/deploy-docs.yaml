@@ -1,0 +1,31 @@
+name: 📚 Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔄 Checkout
+        uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: 📥 Install modules
+        run: npm ci --prefix docs
+      - name: 🏗️ Build application
+        run: npm run build --prefix docs
+      - name: 🚀 Deploy to S3
+        run: aws s3 sync ./docs/dist/ s3://${{ secrets.BUCKET_ID }}
+      - name: ☁️ Create CloudFront invalidation
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
+
