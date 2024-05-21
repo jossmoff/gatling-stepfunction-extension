@@ -45,6 +45,10 @@ trait SfnDsl {
   ): ActionBuilder = builder.build
 
   implicit def sfnDslBuilder2ActionBuilder(
+    builder: StartSyncExecutionActionBuilder
+  ): ActionBuilder = builder.build
+
+  implicit def sfnDslBuilder2ActionBuilder(
       builder: CheckSucceededDslBuilder
   ): ActionBuilder = builder.build
 
