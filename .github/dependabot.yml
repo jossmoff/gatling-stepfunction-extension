@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    reviewers:
-      - "jossmoff"
+    labels:
+      - dependency
     commit-message:
       prefix: "⬆️"
