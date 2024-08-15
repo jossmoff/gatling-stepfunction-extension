@@ -46,7 +46,7 @@ dependencies {
     testImplementation("io.gatling:gatling-core:${gatlingVersion}")
 
     testImplementation("org.scalatest:scalatest-flatspec_3:3.2.16")
-    testImplementation("org.scalatest:scalatest-shouldmatchers_3:3.2.16")
+    testImplementation("org.scalatest:scalatest-shouldmatchers_3:3.3.0-SNAP4")
     testImplementation("org.scalatest:scalatest_3:3.2.16")
 
     testImplementation("org.scalatestplus:scalacheck-1-17_3:3.2.16.0")
