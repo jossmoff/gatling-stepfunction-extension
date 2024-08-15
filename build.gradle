@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'dev.joss'
-version = '1.4.0'
+version = '1.5.0'
 
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
@@ -21,7 +21,7 @@ repositories {
 ext {
     junitVersion = "5.10.0"
     scalaVersion = "2.13.11"
-    gatlingVersion = "3.9.5"
+    gatlingVersion = "3.11.5"
     awsSdkVersion = "2.20.130"
 }
 
