@@ -45,7 +45,7 @@ dependencies {
     testImplementation("io.netty:netty-bom:4.1.96.Final")
     testImplementation("io.gatling:gatling-core:${gatlingVersion}")
 
-    testImplementation("org.scalatest:scalatest-flatspec_3:3.2.16")
+    testImplementation("org.scalatest:scalatest-flatspec_3:3.3.0-SNAP4")
     testImplementation("org.scalatest:scalatest-shouldmatchers_3:3.2.16")
     testImplementation("org.scalatest:scalatest_3:3.3.0-SNAP4")
 
