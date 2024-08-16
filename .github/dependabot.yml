@@ -6,6 +6,6 @@ updates:
     schedule:
       interval: daily
     labels:
-      - dependency
+      - dependencies
     commit-message:
       prefix: "⬆️"
