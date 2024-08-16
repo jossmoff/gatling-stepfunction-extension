@@ -53,7 +53,7 @@ dependencies {
     testImplementation("org.scalatestplus:mockito-4-11_3:3.2.16.0")
     testImplementation("org.scalatestplus:junit-5-9_3:3.2.16.0")
 
-    testImplementation("org.scala-lang.modules:scala-xml_3:2.2.0")
+    testImplementation("org.scala-lang.modules:scala-xml_3:2.3.0")
 
 }
 
