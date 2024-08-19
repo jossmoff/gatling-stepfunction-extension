@@ -22,7 +22,7 @@ repositories {
 
 ext {
     junitVersion = "5.10.0"
-    scalaVersion = "2.13.11"
+    scalaVersion = "2.13.14"
     gatlingVersion = "3.11.5"
     awsSdkVersion = "2.27.6"
 }
