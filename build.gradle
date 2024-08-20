@@ -40,7 +40,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     testImplementation("software.amazon.awssdk:sfn:${awsSdkVersion}")
     testImplementation("software.amazon.awssdk:apache-client:${awsSdkVersion}")
-    testImplementation("com.typesafe.akka:akka-testkit_3:2.8.3")
+    testImplementation("com.typesafe.akka:akka-testkit_3:2.8.6")
     testImplementation("com.typesafe.akka:akka-slf4j_3:2.8.3")
     testImplementation("io.netty:netty-bom:4.1.112.Final")
     testImplementation("io.gatling:gatling-core:${gatlingVersion}")
