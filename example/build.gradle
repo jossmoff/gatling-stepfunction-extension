@@ -25,7 +25,7 @@ gatling {
 ext {
     scalaVersion = "2.13.14"
     gatlingVersion = "3.11.5"
-    awsSdkVersion = "2.27.9"
+    awsSdkVersion = "2.27.18"
     apacheClientVersion = "2.20.116"
 }
 
